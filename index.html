@@ -218,12 +218,20 @@
             --cyan-grad: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
         }
 
+        html {
+            scroll-padding-top: 6.5rem;
+        }
+
         body {
             background-color: var(--bg-void);
             color: #F8FAFC;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
             letter-spacing: -0.011em;
+        }
+
+        main > section[id] {
+            scroll-margin-top: 6.5rem;
         }
 
         /* 4K Ultra-Realistic Glass Panels */
@@ -329,7 +337,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Brand / Logo -->
-                <a href="#hero" onclick="switchPageView('all')" class="flex items-center gap-3 group">
+                <a href="#hero" onclick="switchPageView('all', 'hero', event)" class="flex items-center gap-3 group">
                     <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-[1.5px] transition-transform duration-300 group-hover:scale-105">
                         <div class="w-full h-full bg-[#08090C] rounded-[14px] flex items-center justify-center">
                             <i class="ph-fill ph-sparkle text-xl text-cyan-400"></i>
@@ -343,18 +351,18 @@
 
                 <!-- Desktop Navigation Menu -->
                 <div class="hidden lg:flex items-center gap-1 font-medium text-sm text-slate-300">
-                    <a href="#programmes" onclick="switchPageView('all', 'programmes')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Programmes</a>
-                    <a href="#programme-01" onclick="switchPageView('all', 'programme-01')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Workflow</a>
-                    <a href="#programme-02" onclick="switchPageView('all', 'programme-02')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">AI Productivity</a>
-                    <a href="#strategy" onclick="switchPageView('strategy', 'strategy')" class="px-3.5 py-2 rounded-xl text-cyan-300 bg-cyan-500/10 border border-cyan-500/20 hover:bg-cyan-500/20 transition-all flex items-center gap-1.5">
+                    <a href="#programmes" onclick="switchPageView('all', 'programmes', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Programmes</a>
+                    <a href="#programme-01" onclick="switchPageView('all', 'programme-01', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Workflow</a>
+                    <a href="#programme-02" onclick="switchPageView('all', 'programme-02', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">AI Productivity</a>
+                    <a href="#strategy" onclick="switchPageView('strategy', 'strategy', event)" class="px-3.5 py-2 rounded-xl text-cyan-300 bg-cyan-500/10 border border-cyan-500/20 hover:bg-cyan-500/20 transition-all flex items-center gap-1.5">
                         <i class="ph-bold ph-compass"></i>
                         <span>Strategy</span>
                     </a>
-                    <a href="#programme-03" onclick="switchPageView('all', 'programme-03')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Business Growth</a>
-                    <a href="#about" onclick="switchPageView('about', 'about')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">About Us</a>
-                    <a href="#voice-ai-hub" onclick="switchPageView('all', 'voice-ai-hub')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Voice AI Hub</a>
-                    <a href="#faqs" onclick="switchPageView('all', 'faqs')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">FAQs</a>
-                    <a href="#contact-page" onclick="switchPageView('contact', 'contact-page')" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Contact</a>
+                    <a href="#programme-03" onclick="switchPageView('all', 'programme-03', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Business Growth</a>
+                    <a href="#about" onclick="switchPageView('about', 'about', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">About Us</a>
+                    <a href="#voice-ai-hub" onclick="switchPageView('all', 'voice-ai-hub', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Voice AI Hub</a>
+                    <a href="#faqs" onclick="switchPageView('all', 'faqs', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">FAQs</a>
+                    <a href="#contact-page" onclick="switchPageView('contact', 'contact-page', event)" class="px-3.5 py-2 rounded-xl hover:text-white hover:bg-white/5 transition-all">Contact</a>
                 </div>
 
                 <!-- Desktop Action Button -->
@@ -370,7 +378,7 @@
                     <button onclick="openBookingModal('Free 30-Minute Strategy Session')" class="btn-gemini px-3.5 py-2 rounded-lg font-display font-bold text-xs">
                         Book
                     </button>
-                    <button id="mobile-menu-btn" aria-label="Toggle mobile menu" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white">
+                    <button id="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white">
                         <i class="ph-bold ph-list text-xl"></i>
                     </button>
                 </div>
@@ -378,18 +386,18 @@
         </div>
 
         <!-- Mobile Drawer Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-[#08090C]/95 backdrop-blur-2xl px-6 py-6 space-y-3">
-            <a href="#programmes" onclick="switchPageView('all', 'programmes'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Programmes</a>
-            <a href="#programme-01" onclick="switchPageView('all', 'programme-01'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Workflow Architecture</a>
-            <a href="#programme-02" onclick="switchPageView('all', 'programme-02'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">AI Productivity in Marketing</a>
-            <a href="#strategy" onclick="switchPageView('strategy', 'strategy'); initMobileMenu();" class="block py-2 text-base text-cyan-300 font-medium">Strategy</a>
-            <a href="#programme-03" onclick="switchPageView('all', 'programme-03'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Business Growth (S.C.A.L.E)</a>
-            <a href="#about" onclick="switchPageView('about', 'about'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">About Us & Founder Track Record</a>
-            <a href="#voice-ai-hub" onclick="switchPageView('all', 'voice-ai-hub'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Voice AI & Daily Workflows Hub</a>
-            <a href="#faqs" onclick="switchPageView('all', 'faqs'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">FAQs</a>
-            <a href="#contact-page" onclick="switchPageView('contact', 'contact-page'); initMobileMenu();" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Contact & Global Desks</a>
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-[#08090C]/95 backdrop-blur-2xl px-6 py-6 space-y-3 max-h-[70vh] overflow-y-auto">
+            <a href="#programmes" onclick="switchPageView('all', 'programmes', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Programmes</a>
+            <a href="#programme-01" onclick="switchPageView('all', 'programme-01', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Workflow Architecture</a>
+            <a href="#programme-02" onclick="switchPageView('all', 'programme-02', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">AI Productivity in Marketing</a>
+            <a href="#strategy" onclick="switchPageView('strategy', 'strategy', event)" class="block py-2 text-base text-cyan-300 font-medium">Strategy</a>
+            <a href="#programme-03" onclick="switchPageView('all', 'programme-03', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Business Growth (S.C.A.L.E)</a>
+            <a href="#about" onclick="switchPageView('about', 'about', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">About Us & Founder Track Record</a>
+            <a href="#voice-ai-hub" onclick="switchPageView('all', 'voice-ai-hub', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Voice AI & Daily Workflows Hub</a>
+            <a href="#faqs" onclick="switchPageView('all', 'faqs', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">FAQs</a>
+            <a href="#contact-page" onclick="switchPageView('contact', 'contact-page', event)" class="block py-2 text-base text-slate-300 hover:text-white font-medium">Contact & Global Desks</a>
             <div class="pt-4 border-t border-white/10">
-                <button onclick="openBookingModal('Free 30-Minute Strategy Session'); initMobileMenu();" class="btn-gemini w-full py-3.5 rounded-xl font-display font-bold text-sm text-center">
+                <button onclick="openBookingModal('Free 30-Minute Strategy Session'); closeMobileMenu();" class="btn-gemini w-full py-3.5 rounded-xl font-display font-bold text-sm text-center">
                     Book Free 30-Minute Strategy Session
                 </button>
             </div>
@@ -400,7 +408,7 @@
     <div id="page-filter-banner" class="hidden relative z-20 bg-blue-500/10 border-b border-blue-500/20 py-2.5 px-4 text-center">
         <span class="font-mono text-xs text-blue-300">
             Viewing Focus Section: <strong id="active-page-label" class="text-white"></strong> — 
-            <button onclick="switchPageView('all')" class="underline hover:text-white ml-1">Show Full Experience</button>
+            <button onclick="switchPageView('all', null, event)" class="underline hover:text-white ml-1">Show Full Experience</button>
         </span>
     </div>
 
@@ -434,7 +442,7 @@
                         <span>Book a Free 30-Min Strategy Session</span>
                         <i class="ph-bold ph-arrow-right"></i>
                     </button>
-                    <a href="#programmes" class="px-7 py-4 rounded-2xl font-display font-semibold text-sm sm:text-base bg-white/5 hover:bg-white/10 text-white border border-white/15 backdrop-blur-md transition-all flex items-center gap-2">
+                    <a href="#programmes" onclick="switchPageView('all', 'programmes', event)" class="px-7 py-4 rounded-2xl font-display font-semibold text-sm sm:text-base bg-white/5 hover:bg-white/10 text-white border border-white/15 backdrop-blur-md transition-all flex items-center gap-2">
                         <span>Explore Programmes</span>
                         <i class="ph-bold ph-caret-down"></i>
                     </a>
@@ -542,7 +550,7 @@
                         </ul>
                     </div>
 
-                    <a href="#programme-01" class="w-full py-3.5 px-5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-400/30 text-cyan-300 font-display font-semibold text-sm flex items-center justify-between group/btn transition-all">
+                    <a href="#programme-01" onclick="switchPageView('all', 'programme-01', event)" class="w-full py-3.5 px-5 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 border border-blue-400/30 text-cyan-300 font-display font-semibold text-sm flex items-center justify-between group/btn transition-all">
                         <span>Explore Workflow Architecture</span>
                         <i class="ph-bold ph-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
                     </a>
@@ -598,7 +606,7 @@
                         </ul>
                     </div>
 
-                    <a href="#programme-02" class="w-full py-3.5 px-5 rounded-xl bg-purple-500/15 hover:bg-purple-500/25 border border-purple-400/40 text-purple-200 font-display font-semibold text-sm flex items-center justify-between group/btn transition-all">
+                    <a href="#programme-02" onclick="switchPageView('all', 'programme-02', event)" class="w-full py-3.5 px-5 rounded-xl bg-purple-500/15 hover:bg-purple-500/25 border border-purple-400/40 text-purple-200 font-display font-semibold text-sm flex items-center justify-between group/btn transition-all">
                         <span>Explore AI Marketing Modules</span>
                         <i class="ph-bold ph-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
                     </a>
@@ -654,7 +662,7 @@
                         </ul>
                     </div>
 
-                    <a href="#programme-03" class="w-full py-3.5 px-5 rounded-xl bg-pink-500/10 hover:bg-pink-500/20 border border-pink-400/30 text-pink-300 font-display font-semibold text-sm flex items-center justify-between group/btn transition-all">
+                    <a href="#programme-03" onclick="switchPageView('all', 'programme-03', event)" class="w-full py-3.5 px-5 rounded-xl bg-pink-500/10 hover:bg-pink-500/20 border border-pink-400/30 text-pink-300 font-display font-semibold text-sm flex items-center justify-between group/btn transition-all">
                         <span>Explore Growth Infrastructure</span>
                         <i class="ph-bold ph-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
                     </a>
@@ -1593,26 +1601,30 @@
                     <h3 class="font-display font-bold text-2xl text-white mb-2">Send a Direct Briefing or Book Your 30-Min Session</h3>
                     <p class="text-sm text-slate-400 mb-6">No hard pitch. Select your inquiry type below and we will route your message directly to the right specialist lead.</p>
 
-                    <form onsubmit="submitInlineContactForm(event)" class="space-y-4">
+                    <form name="contact-briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitInlineContactForm(event)" class="space-y-4">
+                        <input type="hidden" name="form-name" value="contact-briefing">
+                        <p class="hidden">
+                            <label>Leave blank <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block font-mono text-xs text-slate-400 mb-1">FULL NAME *</label>
-                                <input id="inline-name" type="text" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                                <input id="inline-name" name="name" type="text" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
                             </div>
                             <div>
                                 <label class="block font-mono text-xs text-slate-400 mb-1">WORK EMAIL *</label>
-                                <input id="inline-email" type="email" required placeholder="jane@company.co.uk" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                                <input id="inline-email" name="email" type="email" required placeholder="jane@company.co.uk" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
                             </div>
                         </div>
 
                         <div class="grid sm:grid-cols-2 gap-4">
                             <div>
                                 <label class="block font-mono text-xs text-slate-400 mb-1">ORGANISATION / COMPANY</label>
-                                <input id="inline-company" type="text" placeholder="Company Ltd" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                                <input id="inline-company" name="company" type="text" placeholder="Company Ltd" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
                             </div>
                             <div>
                                 <label class="block font-mono text-xs text-slate-400 mb-1">INQUIRY DEPARTMENT</label>
-                                <select id="inline-dept" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                                <select id="inline-dept" name="department" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
                                     <option value="Free 30-Minute Business Strategy Session">Free 30-Min Strategy Session</option>
                                     <option value="Strategy: Executive Advisory Consultation">Strategy: Enterprise Advisory Consultation</option>
                                     <option value="Programme 01: Business Workflow Development">01. Business Workflow Development</option>
@@ -1626,7 +1638,7 @@
 
                         <div>
                             <label class="block font-mono text-xs text-slate-400 mb-1">HOW CAN WE HELP YOUR BUSINESS GROW OR AUTOMATE? *</label>
-                            <textarea id="inline-message" rows="3" required placeholder="Tell us about your team, current workflows, or 90-day objectives..." class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none"></textarea>
+                            <textarea id="inline-message" name="message" rows="3" required placeholder="Tell us about your team, current workflows, or 90-day objectives..." class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none"></textarea>
                         </div>
 
                         <button type="submit" class="btn-gemini px-8 py-4 rounded-xl font-display font-bold text-sm flex items-center justify-center gap-2 w-full sm:w-auto">
@@ -1715,10 +1727,10 @@
             <div>
                 <div class="font-mono text-xs text-white uppercase font-bold tracking-wider mb-4">Programmes</div>
                 <ul class="space-y-2 text-sm text-slate-400">
-                    <li><a href="#programme-01" class="hover:text-white transition-colors">Business Workflow Development</a></li>
-                    <li><a href="#programme-02" class="hover:text-white transition-colors">Super Productivity in Marketing with AI</a></li>
-                    <li><a href="#programme-03" class="hover:text-white transition-colors">Business Growth</a></li>
-                    <li><a href="#strategy" class="text-cyan-400 hover:text-cyan-300 transition-colors">Strategy</a></li>
+                    <li><a href="#programme-01" onclick="switchPageView('all', 'programme-01', event)" class="hover:text-white transition-colors">Business Workflow Development</a></li>
+                    <li><a href="#programme-02" onclick="switchPageView('all', 'programme-02', event)" class="hover:text-white transition-colors">Super Productivity in Marketing with AI</a></li>
+                    <li><a href="#programme-03" onclick="switchPageView('all', 'programme-03', event)" class="hover:text-white transition-colors">Business Growth</a></li>
+                    <li><a href="#strategy" onclick="switchPageView('strategy', 'strategy', event)" class="text-cyan-400 hover:text-cyan-300 transition-colors">Strategy</a></li>
                 </ul>
             </div>
 
@@ -1769,21 +1781,23 @@
             <h3 id="modal-title" class="font-display font-bold text-2xl text-white mb-2">Book a 30-Minute Strategy Session</h3>
             <p class="text-xs text-slate-400 mb-6">Direct executive conversation. No sales pitch. We will assess your current bottlenecks and recommend the fastest path to automated growth.</p>
 
-            <form id="strategy-form" onsubmit="submitStrategyForm(event)" class="space-y-4">
-                <!-- Anti-Bot Honeypot -->
-                <input type="text" id="lead-website-hp" class="hidden" tabindex="-1" autocomplete="off">
+            <form id="strategy-form" name="strategy-session" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="submitStrategyForm(event)" class="space-y-4">
+                <input type="hidden" name="form-name" value="strategy-session">
+                <p class="hidden">
+                    <label>Leave blank <input id="lead-website-hp" name="bot-field" tabindex="-1" autocomplete="off"></label>
+                </p>
 
                 <div>
                     <label class="block font-mono text-xs text-slate-400 mb-1">FULL NAME *</label>
-                    <input id="lead-name" type="text" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                    <input id="lead-name" name="name" type="text" required placeholder="Jane Doe" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
                 </div>
                 <div>
                     <label class="block font-mono text-xs text-slate-400 mb-1">BUSINESS EMAIL *</label>
-                    <input id="lead-email" type="email" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                    <input id="lead-email" name="email" type="email" required placeholder="jane@company.com" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
                 </div>
                 <div>
                     <label class="block font-mono text-xs text-slate-400 mb-1">PRIMARY FOCUS AREA</label>
-                    <select id="modal-select" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
+                    <select id="modal-select" name="programme" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none">
                         <option value="Free 30-Minute Strategy Session">Free 30-Minute Business Strategy Session</option>
                         <option value="Strategy: Executive Advisory Consultation">Strategy: Enterprise Advisory Consultation</option>
                         <option value="Programme 01: Business Workflow Development">Programme 01: Business Workflow Development</option>
@@ -1793,7 +1807,7 @@
                 </div>
                 <div>
                     <label class="block font-mono text-xs text-slate-400 mb-1">CURRENT BOTTLENECK / 90-DAY GOAL</label>
-                    <textarea id="lead-goal" rows="2" placeholder="What manual tasks or growth goals do you want to resolve?" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none"></textarea>
+                    <textarea id="lead-goal" name="goal" rows="2" placeholder="What manual tasks or growth goals do you want to resolve?" class="w-full px-4 py-3 rounded-xl bg-[#090B12] border border-white/10 text-white text-sm focus:border-cyan-400 focus:outline-none"></textarea>
                 </div>
 
                 <button type="submit" class="btn-gemini w-full py-4 rounded-xl font-display font-bold text-sm flex items-center justify-center gap-2">
@@ -1807,9 +1821,9 @@
                     <i class="ph-bold ph-check text-2xl"></i>
                 </div>
                 <h4 class="font-display font-bold text-xl text-white">Strategy Telemetry Logged</h4>
-                <p class="text-sm text-slate-300">Your briefing has been prepared. Click below to dispatch directly via your email client or copy your reference brief for <span class="text-cyan-400 font-mono">aao@greatbusinessplatforms.com</span>.</p>
+                <p class="text-sm text-slate-300">Your briefing has been sent. We will reply from <span class="text-cyan-400 font-mono">aiacademyforbeginners@gmail.com</span>. If nothing arrives, use the backup email button below.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-                    <a id="mailto-fallback-link" href="mailto:aao@greatbusinessplatforms.com" class="btn-gemini px-5 py-2.5 rounded-xl font-display font-semibold text-xs flex items-center gap-2">
+                    <a id="mailto-fallback-link" href="mailto:aiacademyforbeginners@gmail.com" class="btn-gemini px-5 py-2.5 rounded-xl font-display font-semibold text-xs flex items-center gap-2">
                         <i class="ph-bold ph-envelope-simple-open"></i>
                         <span>Send Instant Email Confirmation</span>
                     </a>
@@ -1823,17 +1837,45 @@
 
     <script>
         // 1. Mobile Menu Toggle & Multi-Page View Router
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            if (mobileMenu) mobileMenu.classList.add('hidden');
+            if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+
         function initMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
+            if (!mobileMenuBtn || !mobileMenu || mobileMenuBtn.dataset.bound === 'true') return;
+            mobileMenuBtn.dataset.bound = 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.addEventListener('click', () => {
+                const willOpen = mobileMenu.classList.contains('hidden');
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(willOpen));
+            });
         }
 
-        function switchPageView(pageKey, targetId) {
+        function stickyNavOffset() {
+            const nav = document.querySelector('nav.sticky');
+            return (nav ? nav.getBoundingClientRect().height : 80) + 12;
+        }
+
+        function scrollToSection(targetId) {
+            const el = targetId ? document.getElementById(targetId) : null;
+            if (!el || el.classList.contains('hidden')) {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                return;
+            }
+            const top = el.getBoundingClientRect().top + window.scrollY - stickyNavOffset();
+            window.scrollTo({ top: Math.max(0, top), left: 0, behavior: 'smooth' });
+        }
+
+        function switchPageView(pageKey, targetId, evt) {
+            if (evt && typeof evt.preventDefault === 'function') evt.preventDefault();
+            closeMobileMenu();
+
             const allMainSections = document.querySelectorAll('main > section');
             const banner = document.getElementById('page-filter-banner');
             const label = document.getElementById('active-page-label');
@@ -1862,43 +1904,84 @@
                 }
             }
 
-            if (targetId) {
+            requestAnimationFrame(() => {
                 setTimeout(() => {
-                    const el = document.getElementById(targetId);
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                }, 60);
-            } else {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                    if (targetId) scrollToSection(targetId);
+                    else window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                }, 80);
+            });
+        }
+
+        const FORM_INBOX = "aiacademyforbeginners@gmail.com";
+
+        function setMailtoFallback(subject, brief) {
+            const mailtoLink = document.getElementById('mailto-fallback-link');
+            if (mailtoLink) {
+                mailtoLink.href = `mailto:${FORM_INBOX}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(brief)}`;
             }
         }
 
-        function submitInlineContactForm(e) {
+        function showFormSuccess() {
+            const strategyForm = document.getElementById('strategy-form');
+            const formSuccess = document.getElementById('form-success');
+            if (strategyForm) strategyForm.classList.add('hidden');
+            if (formSuccess) formSuccess.classList.remove('hidden');
+        }
+
+        function isLocalPreview() {
+            const host = window.location.hostname;
+            return host === "localhost" || host === "127.0.0.1";
+        }
+
+        async function sendLeadEmail({ formName, subject, fields, brief }) {
+            setMailtoFallback(subject, brief);
+
+            if (!isLocalPreview()) {
+                try {
+                    const res = await fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: new URLSearchParams({ "form-name": formName, ...fields }).toString()
+                    });
+                    if (res.ok) return { ok: true };
+                } catch (err) {
+                    // fall through to mailto backup
+                }
+            }
+
+            window.location.href = `mailto:${FORM_INBOX}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(brief)}`;
+            return { ok: false, usedMailto: true };
+        }
+
+        async function submitInlineContactForm(e) {
             e.preventDefault();
             const nameEl = document.getElementById('inline-name');
             const emailEl = document.getElementById('inline-email');
             const companyEl = document.getElementById('inline-company');
             const deptEl = document.getElementById('inline-dept');
             const messageEl = document.getElementById('inline-message');
+            const submitBtn = e.submitter || e.target.querySelector('button[type="submit"]');
 
             const name = nameEl ? nameEl.value.trim() : '';
             const email = emailEl ? emailEl.value.trim() : '';
             const company = companyEl ? companyEl.value.trim() : '';
             const dept = deptEl ? deptEl.value : 'General Inquiry';
             const message = messageEl ? messageEl.value.trim() : '';
+            const subject = `Great Business Platforms Inquiry: ${dept} (${name})`;
 
             lastSubmittedBrief = `Great Business Platforms Direct Inquiry\nName: ${name}\nEmail: ${email}\nCompany: ${company}\nDepartment: ${dept}\nMessage: ${message}`;
-            openBookingModal(dept);
-            const strategyForm = document.getElementById('strategy-form');
-            const formSuccess = document.getElementById('form-success');
-            if (strategyForm) strategyForm.classList.add('hidden');
-            if (formSuccess) formSuccess.classList.remove('hidden');
 
-            const subject = encodeURIComponent(`Great Business Platforms Inquiry: ${dept} (${name})`);
-            const body = encodeURIComponent(lastSubmittedBrief);
-            const mailtoLink = document.getElementById('mailto-fallback-link');
-            if (mailtoLink) {
-                mailtoLink.href = `mailto:aao@greatbusinessplatforms.com?subject=${subject}&body=${body}`;
-            }
+            if (submitBtn) submitBtn.disabled = true;
+            await sendLeadEmail({
+                formName: "contact-briefing",
+                subject,
+                brief: lastSubmittedBrief,
+                fields: { name, email, company, department: dept, message }
+            });
+            if (submitBtn) submitBtn.disabled = false;
+
+            openBookingModal(dept);
+            showFormSuccess();
         }
 
         // 2. Interactive Card Mouse Spotlight Effect
@@ -1992,7 +2075,7 @@
             if (e.key === 'Escape') closeBookingModal();
         });
 
-        function submitStrategyForm(e) {
+        async function submitStrategyForm(e) {
             e.preventDefault();
             const honeypot = document.getElementById('lead-website-hp');
             if (honeypot && honeypot.value) return;
@@ -2001,30 +2084,30 @@
             const emailEl = document.getElementById('lead-email');
             const selectEl = document.getElementById('modal-select');
             const goalEl = document.getElementById('lead-goal');
+            const submitBtn = e.submitter || e.target.querySelector('button[type="submit"]');
 
             const name = nameEl ? nameEl.value.trim() : '';
             const email = emailEl ? emailEl.value.trim() : '';
             const programme = selectEl ? selectEl.value : 'Strategy Consultation';
             const goal = (goalEl && goalEl.value.trim()) ? goalEl.value.trim() : 'Strategy consultation request';
+            const subject = `Strategy Session Request: ${programme} (${name})`;
 
             lastSubmittedBrief = `Great Business Platforms Strategy Request\nName: ${name}\nEmail: ${email}\nProgramme: ${programme}\nGoal/Bottleneck: ${goal}`;
 
-            const subject = encodeURIComponent(`Strategy Session Request: ${programme} (${name})`);
-            const body = encodeURIComponent(lastSubmittedBrief);
-            const mailtoLink = document.getElementById('mailto-fallback-link');
-            if (mailtoLink) {
-                mailtoLink.href = `mailto:aao@greatbusinessplatforms.com?subject=${subject}&body=${body}`;
-            }
-
-            const strategyForm = document.getElementById('strategy-form');
-            const formSuccess = document.getElementById('form-success');
-            if (strategyForm) strategyForm.classList.add('hidden');
-            if (formSuccess) formSuccess.classList.remove('hidden');
+            if (submitBtn) submitBtn.disabled = true;
+            await sendLeadEmail({
+                formName: "strategy-session",
+                subject,
+                brief: lastSubmittedBrief,
+                fields: { name, email, programme, goal }
+            });
+            if (submitBtn) submitBtn.disabled = false;
+            showFormSuccess();
         }
 
         function copyLeadBrief() {
             const temp = document.createElement('textarea');
-            temp.value = lastSubmittedBrief || 'aao@greatbusinessplatforms.com';
+            temp.value = lastSubmittedBrief || FORM_INBOX;
             document.body.appendChild(temp);
             temp.select();
             document.execCommand('copy');
