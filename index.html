@@ -858,26 +858,28 @@
       </div>
 
       <div class="lg:col-span-7">
-        <form onsubmit="handleDirectSessionBooking(event)" class="surface-card rounded-xl p-7 sm:p-9 space-y-5">
+        <form name="contact-briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleDirectSessionBooking(event)" class="surface-card rounded-xl p-7 sm:p-9 space-y-5">
+          <input type="hidden" name="form-name" value="contact-briefing" />
+          <p class="hidden"><label>Leave this field empty <input name="bot-field" /></label></p>
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label for="contact-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Your Name *</label>
-              <input id="contact-name" type="text" required placeholder="Full name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+              <input id="contact-name" name="name" type="text" required placeholder="Full name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
             </div>
             <div>
               <label for="contact-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Work Email *</label>
-              <input id="contact-email" type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+              <input id="contact-email" name="email" type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
             </div>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-4">
             <div>
               <label for="contact-org" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Organisation</label>
-              <input id="contact-org" type="text" placeholder="Company or Practice Name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+              <input id="contact-org" name="company" type="text" placeholder="Company or Practice Name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
             </div>
             <div>
               <label for="contact-programme" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Primary Focus Area</label>
-              <select id="contact-programme" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white focus:outline-none focus:border-[#D4AF37]">
+              <select id="contact-programme" name="department" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white focus:outline-none focus:border-[#D4AF37]">
                 <option value="Business Workflow Development Audit">Business Workflow Development</option>
                 <option value="Super Productivity in Marketing with AI (AI Academy)">Super Productivity in Marketing with AI</option>
                 <option value="Business Growth & S.C.A.L.E Model">Business Growth (S.C.A.L.E Model)</option>
@@ -889,7 +891,7 @@
 
           <div>
             <label for="contact-notes" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Where Would Relief Matter Most in the Next 90 Days?</label>
-            <textarea id="contact-notes" rows="3" placeholder="Tell us briefly about your team size, current workflow bottlenecks, or growth targets..." class="w-full p-4 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]"></textarea>
+            <textarea id="contact-notes" name="message" rows="3" placeholder="Tell us briefly about your team size, current workflow bottlenecks, or growth targets..." class="w-full p-4 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]"></textarea>
           </div>
 
           <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
@@ -1360,21 +1362,33 @@
 
     function handleDirectSessionBooking(event) {
       event.preventDefault();
+      const form = event.target;
       const name = document.getElementById('contact-name').value.trim();
-      const email = document.getElementById('contact-email').value.trim();
-      const org = document.getElementById('contact-org').value.trim();
-      const prog = document.getElementById('contact-programme').value;
-      const notes = document.getElementById('contact-notes').value.trim();
-
-      const subject = encodeURIComponent(`30-Min Strategy Session Request: ${prog} (${org || name})`);
-      const body = encodeURIComponent(
-        `Name: ${name}\nWork Email: ${email}\nOrganisation: ${org || 'N/A'}\nPrimary Focus: ${prog}\n\n90-Day Objective / Bottleneck:\n${notes || 'Please contact me to schedule our 30-minute strategy session.'}`
-      );
-
       const feedback = document.getElementById('contact-booking-feedback');
-      feedback.classList.remove('hidden');
-      feedback.innerHTML = `Thank you, <strong class="text-white">${name}</strong>. Your inquiry has been formatted for our London advisory desk. <a href="mailto:aao@greatbusinessplatforms.com?subject=${subject}&body=${body}" class="accent-text underline font-semibold">Click here to confirm dispatch in your email client</a> or write directly to <strong>aao@greatbusinessplatforms.com</strong>.`;
-      window.location.href = `mailto:aao@greatbusinessplatforms.com?subject=${subject}&body=${body}`;
+      const button = form.querySelector('button[type="submit"]');
+      const label = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(response => {
+          if (!response.ok) throw new Error('Submission failed');
+          feedback.classList.remove('hidden');
+          feedback.textContent = 'Thank you, ' + name + '. Your request has reached our advisory desk and we will reply within one business day.';
+          form.reset();
+        })
+        .catch(() => {
+          feedback.classList.remove('hidden');
+          feedback.innerHTML = 'Sorry, your request did not send. Please email <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a> directly.';
+        })
+        .finally(() => {
+          button.disabled = false;
+          button.textContent = label;
+        });
     }
 
     // 5. Modal Controls
