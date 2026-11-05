@@ -42,10 +42,7 @@
         "email": "aao@greatbusinessplatforms.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "70 The Avenue",
-          "addressLocality": "Orpington",
-          "addressRegion": "Greater London",
-          "postalCode": "BR5 3DJ",
+          "addressLocality": "London",
           "addressCountry": "GB"
         },
         "description": "Executive advisory and operational systems practice delivering Business Workflow Development, Super Productivity in Marketing with AI, and Business Growth architecture."
@@ -211,26 +208,6 @@
 <body class="selection:bg-[#D4AF37] selection:text-[#080A0F]">
 
   <!-- ==========================================================================
-       ADMIN PALETTE CONTROLLER & CLEAN HTML EXPORT BAR
-       (Stripped automatically when you click "Export Production HTML")
-       ========================================================================== -->
-  <div id="admin-preview-bar" class="w-full bg-[#05070B] border-b border-white/10 px-4 py-2.5 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-2.5">
-        <span class="inline-block w-2 h-2 rounded-full accent-bg"></span>
-        <span class="font-mono uppercase tracking-wider text-slate-300">Strict 3-Tier Monochromatic Discipline:</span>
-        <span class="text-slate-400 hidden md:inline">HBR Editorial Front Page + Dedicated "About Us" Tab + Full Bottom Legal & Original Site Footer</span>
-      </div>
-      <div class="flex flex-wrap items-center gap-2">
-        <button onclick="setPalette('sovereign-gold')" class="px-2.5 py-1 rounded border border-white/15 bg-white/5 hover:border-[#D4AF37] text-slate-200 transition">1. Sovereign Gold (Default)</button>
-        <button onclick="setPalette('executive-ice')" class="px-2.5 py-1 rounded border border-white/15 bg-white/5 hover:border-white text-slate-200 transition">2. Executive Ice</button>
-        <button onclick="setPalette('velvet-green')" class="px-2.5 py-1 rounded border border-white/15 bg-white/5 hover:border-[#D4AF37] text-slate-200 transition">3. Velvet Green & Gold</button>
-        <button onclick="exportCleanHTML()" class="ml-2 px-3 py-1 rounded accent-bg font-semibold tracking-tight transition">Export Production HTML</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
        STICKY EXECUTIVE HEADER (WITH DEDICATED "ABOUT US" TAB)
        ========================================================================== -->
   <header class="sticky top-0 z-40 backdrop-blur-md bg-[#080A0F]/95 border-b hairline-divider">
@@ -246,12 +223,9 @@
       </a>
 
       <nav class="hidden lg:flex items-center gap-6 text-sm text-slate-300">
-        <a href="#hbr-essay" onclick="navigateSection('hbr-essay')" class="hover:text-white transition">The Quiet Crisis</a>
         <a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Programmes</a>
         <a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic')" class="hover:text-white transition">Red-Team Diagnostic</a>
         <a href="#workflow-architecture" onclick="navigateSection('workflow-architecture')" class="hover:text-white transition">Workflow</a>
-        <a href="#ai-curriculum" onclick="navigateSection('ai-curriculum')" class="hover:text-white transition">AI Productivity</a>
-        <a href="#voice-ai-hub" onclick="navigateSection('voice-ai-hub')" class="hover:text-white transition">Voice AI Hub</a>
         <button id="nav-about-tab" onclick="switchPrimaryView('about')" class="px-3 py-1.5 rounded border border-white/15 hover:border-[#D4AF37] text-white font-medium transition flex items-center gap-1.5">
           <span>About Us</span>
         </button>
@@ -273,12 +247,9 @@
 
     <nav id="mobile-nav" class="hidden lg:hidden border-t hairline-divider bg-[#080A0F]/98">
       <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col text-sm text-slate-300">
-        <a href="#hbr-essay" onclick="navigateSection('hbr-essay'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">The Quiet Crisis</a>
         <a href="#programmes" onclick="navigateSection('programmes'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Programmes</a>
         <a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Red-Team Diagnostic</a>
         <a href="#workflow-architecture" onclick="navigateSection('workflow-architecture'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Workflow</a>
-        <a href="#ai-curriculum" onclick="navigateSection('ai-curriculum'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">AI Productivity</a>
-        <a href="#voice-ai-hub" onclick="navigateSection('voice-ai-hub'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Voice AI Hub</a>
         <button id="nav-about-tab-mobile" onclick="switchPrimaryView('about'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition text-left">About Us</button>
         <button onclick="openGuideModal(); closeMobileNav();" class="sm:hidden mt-1 px-3 py-3 rounded btn-outline text-left">Free Executive Guide</button>
       </div>
@@ -297,7 +268,7 @@
            ======================================================================== -->
       <section class="max-w-7xl mx-auto px-6 pt-16 pb-20 lg:pt-24 lg:pb-24 border-b hairline-divider">
         <div class="grid lg:grid-cols-12 gap-12 items-start">
-          
+
           <!-- Left Column: Emotive Harvard Business Review Framing -->
           <div class="lg:col-span-7 space-y-7">
             <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest accent-pill">
@@ -406,46 +377,7 @@
         </div>
       </section>
 
-      <!-- ========================================================================
-           HBR EDITORIAL ESSAY: "THE QUIET CRISIS OF MODERN AMBITION"
-           ======================================================================== -->
-      <section id="hbr-essay" class="max-w-5xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="space-y-8">
-          <div class="flex flex-wrap items-center justify-between gap-4 border-b hairline-divider pb-5">
-            <span class="font-mono text-xs uppercase tracking-widest accent-text">Leadership &amp; Organizational Design</span>
-            <span class="font-mono text-xs text-slate-400">Reading Time: 3 Minutes</span>
-          </div>
 
-          <h2 class="editorial-serif text-3xl sm:text-5xl text-white leading-tight">
-            The Quiet Crisis of Modern Ambition: Why Working Harder Is No Longer Working
-          </h2>
-
-          <div class="grid md:grid-cols-2 gap-8 text-base text-slate-300 leading-relaxed">
-            <div class="space-y-4">
-              <p class="hbr-dropcap">
-                Ask any ambitious founder or senior executive what their working week actually looks like, and you will rarely hear a story about grand strategy. Instead, you will hear about the 9:30 PM inbox clear-out. You will hear about the client proposal that stalled because two software platforms did not speak to each other, or the promising lead who went cold because the team was buried in delivery.
-              </p>
-              <p>
-                Most organisations do not fail from a lack of talent or work ethic. They stall because they attempt to scale a twentieth-century human workflow inside a twenty-first-century market. As the business grows, the invisible glue holding everything together is no longer a documented system—it is the nervous system of the leader and a handful of overworked key staff.
-              </p>
-            </div>
-
-            <div class="space-y-4">
-              <p>
-                When people talk about artificial intelligence and workflow automation, the conversation is often dominated by cold technical jargon. Yet the true promise of well-architected systems is deeply human: <strong class="text-white font-medium">it gives your people their minds back.</strong>
-              </p>
-              <p>
-                When recurring administrative friction is mapped and automated, your team stops acting like human routers copying data between tabs. When marketing pipelines are unified, creative energy returns to strategy and customer empathy. And when growth follows a disciplined, repeatable model, leadership stops feeling like daily firefighting—and starts feeling like stewardship again.
-              </p>
-              <div class="p-5 rounded-lg surface-card mt-4">
-                <p class="editorial-serif italic text-xl text-white leading-snug">
-                  “You do not rise to the level of your commercial goals. You fall to the level of the workflows your team relies on when they are tired.”
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- ========================================================================
            THREE SPECIALIST PROGRAMMES
@@ -462,7 +394,7 @@
         </div>
 
         <div class="grid lg:grid-cols-3 gap-8">
-          
+
           <!-- Pillar 1: Business Workflow Development -->
           <article class="surface-card rounded-xl p-8 flex flex-col justify-between space-y-8">
             <div class="space-y-5">
@@ -512,7 +444,7 @@
               </ul>
             </div>
             <div class="pt-4 border-t hairline-divider">
-              <a href="#ai-curriculum" class="inline-flex items-center justify-between w-full text-xs font-mono uppercase tracking-wider accent-text hover:underline">
+              <a href="#contact-global-desks" class="inline-flex items-center justify-between w-full text-xs font-mono uppercase tracking-wider accent-text hover:underline">
                 <span>Explore the 7-Module Curriculum</span>
                 <span>&rarr;</span>
               </a>
@@ -555,7 +487,7 @@
            ======================================================================== -->
       <section id="red-team-diagnostic" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
         <div class="grid lg:grid-cols-12 gap-12 items-start">
-          
+
           <div class="lg:col-span-5 space-y-6">
             <span class="font-mono text-xs uppercase tracking-widest accent-text">// Red-Team Operational Diagnostic</span>
             <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
@@ -704,129 +636,6 @@
       </section>
 
       <!-- ========================================================================
-           7-MODULE AI MARKETING PRODUCTIVITY CURRICULUM
-           ======================================================================== -->
-      <section id="ai-curriculum" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-          
-          <div class="lg:col-span-5 space-y-6">
-            <span class="font-mono text-xs uppercase tracking-widest accent-text">// Super Productivity in Marketing with AI</span>
-            <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-              Compress Your Marketing Workload. Expand Your Authority.
-            </h2>
-            <p class="text-base text-slate-300 leading-relaxed">
-              The best AI productivity tools are not isolated novelties—they form a unified editorial and commercial pipeline. Across seven structured modules, we train you and your team to orchestrate multi-LLM workflows, generative video, and voice agents with confidence and legal clarity.
-            </p>
-
-            <div class="surface-card rounded-xl p-6 space-y-4">
-              <div class="font-mono text-xs uppercase tracking-widest accent-text">AI Academy Executive Standards</div>
-              <ul class="space-y-2.5 text-sm text-slate-300">
-                <li class="flex items-center gap-2.5"><span class="accent-text font-mono">✓</span><span>Multi-LLM role specialization (Gemini + Claude + ChatGPT)</span></li>
-                <li class="flex items-center gap-2.5"><span class="accent-text font-mono">✓</span><span>Hands-on training across 12+ enterprise production tools</span></li>
-                <li class="flex items-center gap-2.5"><span class="accent-text font-mono">✓</span><span>Zero coding required for full team deployment</span></li>
-                <li class="flex items-center gap-2.5"><span class="accent-text font-mono">✓</span><span>20+ hours saved per marketing professional every week</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 grid sm:grid-cols-2 gap-4">
-            <div class="surface-card rounded-xl p-6 space-y-2">
-              <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Module 01</span>
-              <h3 class="text-base font-semibold text-white">ChatGPT, Claude &amp; Gemini for Marketing</h3>
-              <p class="text-xs text-slate-300 leading-relaxed">Assign the right reasoning engine to the right task—strategic positioning, deep research, and persuasive executive copy that never sounds robotic.</p>
-            </div>
-
-            <div class="surface-card rounded-xl p-6 space-y-2">
-              <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Module 02</span>
-              <h3 class="text-base font-semibold text-white">AI Governance &amp; Legal Boundaries</h3>
-              <p class="text-xs text-slate-300 leading-relaxed">Protect your brand reputation, client confidentiality, and intellectual property with clear UK/EU compliance guardrails and human-in-the-loop review.</p>
-            </div>
-
-            <div class="surface-card rounded-xl p-6 space-y-2">
-              <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Module 03</span>
-              <h3 class="text-base font-semibold text-white">Build Marketing Assets &amp; Pages with AI</h3>
-              <p class="text-xs text-slate-300 leading-relaxed">Transform rough strategic ideas into high-converting landing pages, executive briefings, and campaign collateral in hours rather than weeks.</p>
-            </div>
-
-            <div class="surface-card rounded-xl p-6 space-y-2">
-              <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Module 04</span>
-              <h3 class="text-base font-semibold text-white">Automate Your Marketing Workflows</h3>
-              <p class="text-xs text-slate-300 leading-relaxed">Eliminate repetitive copy-pasting between social channels, email sequences, and CRM pipelines so campaigns run reliably in the background.</p>
-            </div>
-
-            <div class="surface-card rounded-xl p-6 space-y-2">
-              <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Module 05</span>
-              <h3 class="text-base font-semibold text-white">AI Video &amp; Visual Studio Production</h3>
-              <p class="text-xs text-slate-300 leading-relaxed">Deploy studio-grade video presentations, synthetic avatars, and visual assets at scale without camera crew bottlenecks.</p>
-            </div>
-
-            <div class="surface-card rounded-xl p-6 space-y-2">
-              <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Module 06</span>
-              <h3 class="text-base font-semibold text-white">AI-Powered Lead Generation Sequences</h3>
-              <p class="text-xs text-slate-300 leading-relaxed">Design empathetic, personalized prospect research and nurture journeys that start meaningful commercial conversations automatically.</p>
-            </div>
-
-            <div class="surface-card rounded-xl p-6 space-y-2 sm:col-span-2">
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Module 07 // Specialist Advanced</span>
-                <span class="font-mono text-[11px] text-slate-400">Executive Deployment</span>
-              </div>
-              <h3 class="text-base font-semibold text-white">Voice AI Agents &amp; Autonomous Customer Operations</h3>
-              <p class="text-xs text-slate-300 leading-relaxed">Deploy real-time conversational Voice AI assistants capable of answering inbound inquiries, qualifying executive fit, and booking calendar briefings 24/7.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ========================================================================
-           VOICE AI & AGENTIC WORKFLOW INTELLIGENCE HUB
-           ======================================================================== -->
-      <section id="voice-ai-hub" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
-          <div class="max-w-3xl space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest accent-text">// Voice AI &amp; Customer Empathy Hub</span>
-            <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-              Every Missed Call Is a Human Being Looking for Reassurance.
-            </h2>
-            <p class="text-base text-slate-300 leading-relaxed">
-              When a prospective client reaches out at 6:45 PM, they are not looking to fill out a cold web form and wait forty-eight hours. Explore our executive briefings on how modern Conversational Voice AI and Agentic Workflows preserve warmth and responsiveness at scale.
-            </p>
-          </div>
-          <div class="w-full lg:w-80">
-            <label for="hub-search" class="sr-only">Filter Intelligence Briefings</label>
-            <input id="hub-search" type="search" oninput="filterVoiceHub(this.value)" placeholder="Filter briefings (e.g. Voice AI, ROI, SOPs)..." class="w-full px-4 py-3 rounded surface-card text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-          </div>
-        </div>
-
-        <div id="voice-hub-grid" class="grid md:grid-cols-3 gap-6">
-          <article class="surface-card rounded-xl p-7 space-y-4 hub-item" data-keywords="ai voice assistant for business inbound calls empathy">
-            <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Briefing 01 // Responsiveness</span>
-            <h3 class="editorial-serif text-2xl text-white">Why Immediate Voice Response Wins High-Trust Clients</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              An AI voice assistant for business does not replace human relationships—it protects them. By answering every inquiry on the first ring with natural warmth, qualifying intent, and booking directly into your diary, your team never misses a critical moment of buyer trust.
-            </p>
-          </article>
-
-          <article class="surface-card rounded-xl p-7 space-y-4 hub-item" data-keywords="how do ai voice agents work latency stt llm tts">
-            <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Briefing 02 // Architecture</span>
-            <h3 class="editorial-serif text-2xl text-white">How Conversational AI Voice Agents Actually Work</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Modern voice agents combine real-time speech recognition, sub-second reasoning models grounded strictly in your company’s approved knowledge base, and natural-sounding speech synthesis—handling nuanced questions and CRM updates seamlessly.
-            </p>
-          </article>
-
-          <article class="surface-card rounded-xl p-7 space-y-4 hub-item" data-keywords="agentic workflow automation sops scale governance">
-            <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Briefing 03 // Operations</span>
-            <h3 class="editorial-serif text-2xl text-white">From Isolated Prompts to Agentic Workflow Automation</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Agentic workflow automation moves beyond basic linear triggers. Instead of employees manually copying notes from a call into an email and CRM, an agentic pipeline drafts the follow-up proposal, logs the outcome, and alerts the account director automatically.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ========================================================================
            FREQUENTLY ASKED QUESTIONS
            ======================================================================== -->
       <section id="faqs" class="max-w-5xl mx-auto px-6 py-20 border-b hairline-divider">
@@ -874,7 +683,7 @@
               <span class="accent-text font-mono text-lg group-open:rotate-45 transition-transform">+</span>
             </summary>
             <p class="mt-4 text-sm text-slate-300 leading-relaxed">
-              For Super Productivity in Marketing with AI, you can explore our 7-module AI Academy curriculum. For Business Workflow Development or Business Growth coaching, book a complimentary 30-minute strategy session below or email <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>—a direct conversation, no hard pitch, focused entirely on your specific situation.
+              For Super Productivity in Marketing with AI, you can explore our 7-module AI Academy curriculum. For Business Workflow Development or Business Growth coaching, book a complimentary 30-minute strategy session below or email <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>.
             </p>
           </details>
         </div>
@@ -885,14 +694,11 @@
 
   <!-- ==========================================================================
        VIEW 2: DEDICATED "ABOUT US" TAB
-       (Restores the complete original About Us content, institutional pedigree,
-       20+ years track record, Sam Onigbanjo's leadership profile, £77M Croydon
-       transformation programme, Oxford/FCIM credentials, and executive testimonials)
        ========================================================================== -->
   <div id="view-about" class="page-view">
     <main class="ambient-spotlight">
       <section class="max-w-7xl mx-auto px-6 pt-14 pb-20 border-b hairline-divider">
-        
+
         <!-- Breadcrumb & Back to Front Page -->
         <div class="flex flex-wrap items-center justify-between gap-4 pb-8 mb-12 border-b hairline-divider">
           <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate-400">
@@ -1030,28 +836,18 @@
   <!-- 1. CONTACT & GLOBAL DESKS -->
   <section id="contact-global-desks" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
     <div class="grid lg:grid-cols-12 gap-12 items-start">
-      
+
       <div class="lg:col-span-5 space-y-6">
         <span class="font-mono text-xs uppercase tracking-widest accent-text">// Contact &amp; Global Desks</span>
         <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
           Send a Direct Briefing or Book Your 30-Min Session.
         </h2>
-        <p class="text-base text-slate-300 leading-relaxed">
-          No hard pitch. Select your inquiry type and we will route your message directly to the right advisory desk—focused entirely on your specific operational or commercial situation.
-        </p>
 
         <div class="space-y-4 pt-2 border-t hairline-divider text-sm text-slate-300">
-          <div>
-            <span class="font-mono text-[11px] uppercase tracking-widest accent-text block">Registered UK Headquarters &amp; Global Desk</span>
-            <p class="text-white font-medium mt-0.5">London / Greater London, United Kingdom</p>
-            <p class="text-xs text-slate-400">70 The Avenue, Orpington, Greater London, BR5 3DJ • Serving UK, US, EU &amp; 30+ Countries</p>
-          </div>
           <div>
             <span class="font-mono text-[11px] uppercase tracking-widest accent-text block">Direct Advisory &amp; Booking Desks</span>
             <p class="mt-0.5">
               <a href="mailto:aao@greatbusinessplatforms.com" class="text-white hover:underline">aao@greatbusinessplatforms.com</a>
-              <span class="text-slate-500 mx-1.5">•</span>
-              <a href="mailto:sam@greatbusinessplatforms.com" class="text-white hover:underline">sam@greatbusinessplatforms.com</a>
             </p>
           </div>
           <div>
@@ -1123,7 +919,7 @@
           Privacy Policy, Terms &amp; Conditions, and Refund Policy
         </h2>
         <p class="text-xs text-slate-400">
-          Great Business Platforms Ltd (Registered in England and Wales, No. 08660704) • 70 The Avenue, Orpington, Greater London, BR5 3DJ
+          Great Business Platforms Ltd (Registered in England and Wales, No. 08660704)
         </p>
       </div>
 
@@ -1153,7 +949,7 @@
           <div>
             <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">1. Data Controller</h4>
             <p>
-              <strong class="text-white">Data Controller:</strong> Great Business Platforms (Great Business Platforms Ltd, Registered in England and Wales, Company No. 08660704). Registered Address: 70 The Avenue, Orpington, Greater London, BR5 3DJ. Contact: <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>.
+              <strong class="text-white">Data Controller:</strong> Great Business Platforms (Great Business Platforms Ltd, Registered in England and Wales, Company No. 08660704). Contact: <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>.
             </p>
           </div>
 
@@ -1262,7 +1058,7 @@
        ========================================================================== -->
   <footer class="bg-[#06080C] text-slate-400 text-xs">
     <div class="max-w-7xl mx-auto px-6 py-14 space-y-10">
-      
+
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 border-b hairline-divider pb-10">
         <!-- Brand Column -->
         <div class="space-y-3">
@@ -1273,9 +1069,6 @@
           <p class="leading-relaxed text-slate-400">
             One Mission. Exceptional Business. Delivering Business Workflow Development, Super Productivity in Marketing with AI, and Business Growth architecture.
           </p>
-          <p class="font-mono text-[11px] text-slate-500">
-            70 The Avenue, Orpington, Greater London, BR5 3DJ
-          </p>
         </div>
 
         <!-- Core Programmes Navigation -->
@@ -1283,7 +1076,7 @@
           <div class="font-mono text-[11px] uppercase tracking-widest accent-text">Specialist Programmes</div>
           <ul class="space-y-2">
             <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Business Workflow Development</a></li>
-            <li><a href="#ai-curriculum" onclick="navigateSection('ai-curriculum')" class="hover:text-white transition">Super Productivity in Marketing with AI</a></li>
+            <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Super Productivity in Marketing with AI</a></li>
             <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Business Growth (S.C.A.L.E Model)</a></li>
             <li><a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic')" class="hover:text-white transition">Red-Team Operational Diagnostic</a></li>
           </ul>
@@ -1294,7 +1087,6 @@
           <div class="font-mono text-[11px] uppercase tracking-widest accent-text">Platform Directory</div>
           <ul class="space-y-2">
             <li><button onclick="switchPrimaryView('about')" class="hover:text-white transition text-left">About Us &amp; Sam Onigbanjo</button></li>
-            <li><a href="#voice-ai-hub" onclick="navigateSection('voice-ai-hub')" class="hover:text-white transition">Voice AI &amp; AEO Directory</a></li>
             <li><a href="#faqs" onclick="navigateSection('faqs')" class="hover:text-white transition">Frequently Asked Questions</a></li>
             <li><a href="#contact-global-desks" onclick="scrollToElement('contact-global-desks')" class="hover:text-white transition">Contact &amp; Global Desks</a></li>
           </ul>
@@ -1365,7 +1157,7 @@
   </div>
 
   <!-- ==========================================================================
-       APPLICATION LOGIC: VIEW SWITCHING, LEGAL TABS, RED-TEAM ENGINE & CLEAN EXPORT
+       APPLICATION LOGIC: VIEW SWITCHING, LEGAL TABS, RED-TEAM ENGINE
        ========================================================================== -->
   <script>
     // Set current copyright year
@@ -1544,16 +1336,7 @@
       document.getElementById('diag-phase-3-desc').textContent = data.p3Desc;
     }
 
-    // 4. Filter Voice AI Hub Briefings
-    function filterVoiceHub(query) {
-      const q = query.toLowerCase().trim();
-      document.querySelectorAll('.hub-item').forEach(card => {
-        const text = (card.textContent + ' ' + (card.dataset.keywords || '')).toLowerCase();
-        card.style.display = text.includes(q) ? '' : 'none';
-      });
-    }
-
-    // 5. Ebook & Strategy Session Lead Routing
+    // 4. Ebook & Strategy Session Lead Routing
     function handleBriefingSignup(event, feedbackId) {
       event.preventDefault();
       const box = document.getElementById(feedbackId);
@@ -1590,11 +1373,11 @@
 
       const feedback = document.getElementById('contact-booking-feedback');
       feedback.classList.remove('hidden');
-      feedback.innerHTML = `Thank you, <strong class="text-white">${name}</strong>. Your inquiry has been formatted for our London advisory desk. <a href="mailto:aao@greatbusinessplatforms.com?cc=sam@greatbusinessplatforms.com&subject=${subject}&body=${body}" class="accent-text underline font-semibold">Click here to confirm dispatch in your email client</a> or write directly to <strong>aao@greatbusinessplatforms.com</strong>.`;
+      feedback.innerHTML = `Thank you, <strong class="text-white">${name}</strong>. Your inquiry has been formatted for our London advisory desk. <a href="mailto:aao@greatbusinessplatforms.com?subject=${subject}&body=${body}" class="accent-text underline font-semibold">Click here to confirm dispatch in your email client</a> or write directly to <strong>aao@greatbusinessplatforms.com</strong>.`;
       window.location.href = `mailto:aao@greatbusinessplatforms.com?subject=${subject}&body=${body}`;
     }
 
-    // 6. Modal Controls
+    // 5. Modal Controls
     function openGuideModal() {
       const m = document.getElementById('guide-modal');
       m.classList.remove('hidden');
@@ -1605,28 +1388,6 @@
       const m = document.getElementById('guide-modal');
       m.classList.add('hidden');
       m.classList.remove('flex');
-    }
-
-    // 7. Theme Switcher & Clean Production HTML Exporter
-    function setPalette(themeName) {
-      document.documentElement.setAttribute('data-theme', themeName);
-    }
-
-    function exportCleanHTML() {
-      const clone = document.documentElement.cloneNode(true);
-      const adminBar = clone.querySelector('#admin-preview-bar');
-      if (adminBar) adminBar.remove();
-
-      const htmlContent = '<!DOCTYPE html>\n' + clone.outerHTML;
-      const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'index.html';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
     }
   </script>
 </body>
