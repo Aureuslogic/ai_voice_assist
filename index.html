@@ -352,14 +352,16 @@
                 </li>
               </ul>
 
-              <form onsubmit="handleBriefingSignup(event, 'hero-briefing-feedback')" class="space-y-3">
+              <form name="executive-briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleBriefingSignup(event, 'hero-briefing-feedback')" class="space-y-3">
+                <input type="hidden" name="form-name" value="executive-briefing" />
+                <p class="hidden"><label>Leave this field empty <input name="bot-field" /></label></p>
                 <div>
                   <label for="hero-name" class="sr-only">Your First Name</label>
-                  <input id="hero-name" type="text" required placeholder="Your first name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+                  <input id="hero-name" name="name" type="text" required placeholder="Your first name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
                 </div>
                 <div>
                   <label for="hero-email" class="sr-only">Your Work Email</label>
-                  <input id="hero-email" type="email" required placeholder="Your work email address" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+                  <input id="hero-email" name="email" type="email" required placeholder="Your work email address" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
                 </div>
                 <button type="submit" class="w-full py-3.5 rounded text-sm font-semibold accent-bg transition">
                   Send Me The Executive Briefing
@@ -1147,9 +1149,11 @@
       <p class="text-sm text-slate-300 leading-relaxed">
         Learn where ambitious organisations unintentionally build founder dependency, how to connect multi-LLM workflows without losing your brand’s human voice, and the four-stage blueprint for operational calm.
       </p>
-      <form onsubmit="handleBriefingSignup(event, 'modal-briefing-feedback')" class="space-y-3">
-        <input type="text" required placeholder="Your first name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-        <input type="email" required placeholder="Your work email address" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+      <form name="executive-briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleBriefingSignup(event, 'modal-briefing-feedback')" class="space-y-3">
+        <input type="hidden" name="form-name" value="executive-briefing" />
+                <p class="hidden"><label>Leave this field empty <input name="bot-field" /></label></p>
+        <input name="name" type="text" required placeholder="Your first name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
+        <input name="email" type="email" required placeholder="Your work email address" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
         <button type="submit" class="w-full py-3.5 rounded text-sm font-semibold accent-bg transition">
           Send Me The Executive Guide
         </button>
@@ -1341,9 +1345,32 @@
     // 4. Ebook & Strategy Session Lead Routing
     function handleBriefingSignup(event, feedbackId) {
       event.preventDefault();
+      const form = event.target;
       const box = document.getElementById(feedbackId);
-      box.classList.remove('hidden');
-      box.innerHTML = '<strong>Executive Briefing Dispatched:</strong> Thank you. Your copy of <em>“The 4 Expensive Blindspots”</em> is ready. For immediate priority routing or to request your complimentary 30-minute workflow review, email <a href="mailto:aao@greatbusinessplatforms.com?subject=Executive%20Briefing%20%26%2030-Min%20Session" class="accent-text underline">aao@greatbusinessplatforms.com</a>.';
+      const button = form.querySelector('button[type="submit"]');
+      const label = button.textContent;
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(response => {
+          if (!response.ok) throw new Error('Submission failed');
+          box.classList.remove('hidden');
+          box.innerHTML = '<strong>Thank you.</strong> Your request for <em>The 4 Expensive Blindspots</em> has reached us, and the briefing will be sent to your inbox.';
+          form.reset();
+        })
+        .catch(() => {
+          box.classList.remove('hidden');
+          box.innerHTML = 'Sorry, your request did not send. Please email <a href="mailto:aao@greatbusinessplatforms.com?subject=Executive%20Briefing" class="accent-text underline">aao@greatbusinessplatforms.com</a> and we will send the briefing.';
+        })
+        .finally(() => {
+          button.disabled = false;
+          button.textContent = label;
+        });
     }
 
     function prefillInquiry(programmeName) {
