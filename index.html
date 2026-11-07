@@ -1,1428 +1,396 @@
-<!DOCTYPE html>
-<html lang="en-GB" class="scroll-smooth">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Great Business Platforms | Business Workflow, AI Productivity & Growth Architecture</title>
-  <meta name="description" content="Great Business Platforms delivers three specialist programmes for serious business owners, entrepreneurs, and leadership teams: Business Workflow Development, Super Productivity in Marketing with AI, and Business Growth." />
-  <link rel="canonical" href="https://www.greatbusinessplatforms.com/" />
-
-  <!-- Fonts: Instrument Serif (HBR Editorial Voice), Plus Jakarta Sans (Clean Executive UI), JetBrains Mono (System Telemetry) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Structured Data (AEO & Rich Results Schema) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.greatbusinessplatforms.com/#organization",
-        "name": "Great Business Platforms",
-        "legalName": "Great Business Platforms Ltd",
-        "url": "https://www.greatbusinessplatforms.com/",
-        "email": "aao@greatbusinessplatforms.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "London",
-          "addressCountry": "GB"
-        },
-        "description": "Executive advisory and operational systems practice delivering Business Workflow Development, Super Productivity in Marketing with AI, and Business Growth architecture."
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    /* ==========================================================================
-       STRICT 3-TIER EXECUTIVE COLOR ARCHITECTURE (ZERO MULTI-COLOR NOISE)
-       Tier 1: Deep Obsidian & Architectural Slate Surfaces
-       Tier 2: High-Contrast Editorial Alabaster & Muted Slate Typography
-       Tier 3: Single Unified Brand Accent (Sovereign Champagne Gold Default)
-       ========================================================================== */
-    :root,
-    [data-theme="sovereign-gold"] {
-      --bg-canvas: #080A0F;
-      --bg-surface: #0F141C;
-      --bg-elevated: #151C28;
-      --text-primary: #F8FAFC;
-      --text-secondary: #94A3B8;
-      --text-muted: #64748B;
-      --accent: #D4AF37;
-      --accent-hover: #E5C358;
-      --accent-subtle: rgba(212, 175, 55, 0.10);
-      --accent-border: rgba(212, 175, 55, 0.32);
-      --border-hairline: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(255, 255, 255, 0.15);
-    }
-
-    [data-theme="executive-ice"] {
-      --bg-canvas: #090B10;
-      --bg-surface: #10141D;
-      --bg-elevated: #171D29;
-      --text-primary: #FFFFFF;
-      --text-secondary: #94A3B8;
-      --text-muted: #64748B;
-      --accent: #E2E8F0;
-      --accent-hover: #FFFFFF;
-      --accent-subtle: rgba(226, 232, 240, 0.10);
-      --accent-border: rgba(226, 232, 240, 0.32);
-      --border-hairline: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(255, 255, 255, 0.16);
-    }
-
-    [data-theme="velvet-green"] {
-      --bg-canvas: #060D0A;
-      --bg-surface: #0B1612;
-      --bg-elevated: #11221C;
-      --text-primary: #F8FAFC;
-      --text-secondary: #94A3B8;
-      --text-muted: #64748B;
-      --accent: #D4AF37;
-      --accent-hover: #E5C358;
-      --accent-subtle: rgba(212, 175, 55, 0.10);
-      --accent-border: rgba(212, 175, 55, 0.32);
-      --border-hairline: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(255, 255, 255, 0.15);
-    }
-
-    body {
-      background-color: var(--bg-canvas);
-      color: var(--text-primary);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    .editorial-serif {
-      font-family: 'Instrument Serif', Georgia, serif;
-      letter-spacing: -0.01em;
-    }
-
-    .surface-card {
-      background-color: var(--bg-surface);
-      border: 1px solid var(--border-hairline);
-      transition: border-color 0.25s ease, transform 0.25s ease, background-color 0.25s ease;
-    }
-
-    .surface-card:hover {
-      border-color: var(--accent-border);
-    }
-
-    .surface-elevated {
-      background-color: var(--bg-elevated);
-      border: 1px solid var(--border-strong);
-    }
-
-    .accent-text {
-      color: var(--accent);
-    }
-
-    .accent-bg {
-      background-color: var(--accent);
-      color: #080A0F;
-    }
-
-    .accent-bg:hover {
-      background-color: var(--accent-hover);
-    }
-
-    .accent-pill {
-      background-color: var(--accent-subtle);
-      color: var(--accent);
-      border: 1px solid var(--accent-border);
-    }
-
-    .btn-outline {
-      border: 1px solid var(--border-strong);
-      color: var(--text-primary);
-      background-color: transparent;
-      transition: all 0.2s ease;
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      background-color: var(--accent-subtle);
-    }
-
-    .hairline-divider {
-      border-color: var(--border-hairline);
-    }
-
-    /* Subtle single-tone radial ambient light */
-    .ambient-spotlight {
-      background: radial-gradient(circle at 50% 0%, var(--accent-subtle) 0%, transparent 68%);
-    }
-
-    /* Dropcap for HBR Editorial Essay */
-    .hbr-dropcap::first-letter {
-      font-family: 'Instrument Serif', Georgia, serif;
-      float: left;
-      font-size: 4.2rem;
-      line-height: 0.82;
-      padding-right: 0.75rem;
-      padding-top: 0.2rem;
-      color: var(--accent);
-    }
-
-    /* Active Top-Level Page View Switcher */
-    .page-view {
-      display: none;
-      animation: fadeIn 0.28s ease-out;
-    }
-    .page-view.active {
-      display: block;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 640px) {
-      .hbr-dropcap::first-letter {
-        font-size: 3.1rem;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Great Business Platforms | AI Consultancy, Workflow Automation and AI Training, UK</title>
+<meta name="description" content="UK AI consultancy. We find where AI pays, build agentic workflows and AI voice agents, and train the teams who run them. Book a free 30-minute strategy session.">
+<link rel="canonical" href="https://www.greatbusinessplatforms.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Great Business Platforms">
+<meta property="og:title" content="Great Business Platforms | AI that earns its place in your business">
+<meta property="og:description" content="Agentic workflow automation, AI voice agents, AI productivity training and growth strategy for UK businesses.">
+<meta property="og:url" content="https://www.greatbusinessplatforms.com/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#F6F8FB}
+a{color:#0B1F3A}a:hover{color:#8A6420}
+details summary{cursor:pointer;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";float:right;color:#8A6420;font-weight:400}
+details[open] summary::after{content:"\2212"}
+input,select,textarea,button{font:inherit}
+:focus-visible{outline:2px solid #C9A55A;outline-offset:2px}
+[id]{scroll-margin-top:16px}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"ProfessionalService","@id":"https://www.greatbusinessplatforms.com/#org","name":"Great Business Platforms","url":"https://www.greatbusinessplatforms.com/","email":"aao@greatbusinessplatforms.com","areaServed":["GB","US","EU","Africa"],"description":"UK AI consultancy and training: agentic workflow automation, AI voice agents, AI productivity training and growth strategy.","knowsAbout":["AI transformation","Agentic workflow automation","AI voice agents","Conversational AI","AI training"]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Who do you work with?","acceptedAnswer":{"@type":"Answer","text":"UK business owners, founders and leadership teams, plus organisations across three continents. Clients come to us with a clear operational or growth problem they want solved."}},
+{"@type":"Question","name":"Do my team need technical skills?","acceptedAnswer":{"@type":"Answer","text":"No. Everything is taught in plain English on real business tasks. If you can write an email, you can do the work."}},
+{"@type":"Question","name":"How is this different from other AI training?","acceptedAnswer":{"@type":"Answer","text":"We start with the business problem, not the tool, and we build the systems with you. You finish with automations running and a team that owns them."}},
+{"@type":"Question","name":"What happens in the free session?","acceptedAnswer":{"@type":"Answer","text":"A 30-minute conversation about your bottleneck. We cost the problem with you and recommend the fastest next step. No pitch."}}
+]}]}
+</script>
 </head>
-<body class="selection:bg-[#D4AF37] selection:text-[#080A0F]">
-
-  <!-- ==========================================================================
-       STICKY EXECUTIVE HEADER (WITH DEDICATED "ABOUT US" TAB)
-       ========================================================================== -->
-  <header class="sticky top-0 z-40 backdrop-blur-md bg-[#080A0F]/95 border-b hairline-divider">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 min-h-20 py-3 flex items-center justify-between gap-3">
-      <a href="#top" onclick="switchPrimaryView('home'); closeMobileNav();" class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
-        <div class="w-9 h-9 shrink-0 rounded flex items-center justify-center surface-elevated font-serif text-xl accent-text">
-          G
-        </div>
-        <div class="min-w-0">
-          <span class="block text-sm sm:text-base font-semibold tracking-tight text-white leading-tight">Great Business Platforms</span>
-          <span class="hidden sm:block font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Agentic AI &amp; Growth OS</span>
-        </div>
-      </a>
-
-      <nav class="hidden lg:flex items-center gap-6 text-sm text-slate-300">
-        <a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Programmes</a>
-        <a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic')" class="hover:text-white transition">Red-Team Diagnostic</a>
-        <a href="#workflow-architecture" onclick="navigateSection('workflow-architecture')" class="hover:text-white transition">Workflow</a>
-        <button id="nav-about-tab" onclick="switchPrimaryView('about')" class="px-3 py-1.5 rounded border border-white/15 hover:border-[#D4AF37] text-white font-medium transition flex items-center gap-1.5">
-          <span>About Us</span>
-        </button>
-      </nav>
-
-      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        <button onclick="openGuideModal()" class="hidden sm:inline-flex px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider btn-outline">
-          Free Executive Guide
-        </button>
-        <a href="#contact-global-desks" onclick="scrollToElement('contact-global-desks'); closeMobileNav();" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded text-[10px] sm:text-xs font-mono uppercase tracking-wider font-semibold accent-bg transition whitespace-nowrap">
-          Book a Session
-        </a>
-        <button id="mobile-nav-toggle" type="button" class="lg:hidden w-10 h-10 rounded btn-outline flex items-center justify-center" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleMobileNav()">
-          <svg id="mobile-nav-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M4 12h16M4 17h16"/></svg>
-          <svg id="mobile-nav-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 6l12 12M18 6L6 18"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <nav id="mobile-nav" class="hidden lg:hidden border-t hairline-divider bg-[#080A0F]/98">
-      <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col text-sm text-slate-300">
-        <a href="#programmes" onclick="navigateSection('programmes'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Programmes</a>
-        <a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Red-Team Diagnostic</a>
-        <a href="#workflow-architecture" onclick="navigateSection('workflow-architecture'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Workflow</a>
-        <button id="nav-about-tab-mobile" onclick="switchPrimaryView('about'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition text-left">About Us</button>
-        <button onclick="openGuideModal(); closeMobileNav();" class="sm:hidden mt-1 px-3 py-3 rounded btn-outline text-left">Free Executive Guide</button>
-      </div>
-    </nav>
-  </header>
-
-  <!-- ==========================================================================
-       VIEW 1: FRONT PAGE (HBR EMOTIVE EDITORIAL + CORE ARCHITECTURE)
-       (Sam Onigbanjo is kept off the front page as requested and lives inside the dedicated "About Us" tab)
-       ========================================================================== -->
-  <div id="view-home" class="page-view active">
-    <main id="top" class="ambient-spotlight">
-
-      <!-- ========================================================================
-           HERO SECTION: EMOTIVE HBR NARRATIVE + EXECUTIVE GUIDE OPT-IN
-           ======================================================================== -->
-      <section class="max-w-7xl mx-auto px-6 pt-16 pb-20 lg:pt-24 lg:pb-24 border-b hairline-divider">
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-
-          <!-- Left Column: Emotive Harvard Business Review Framing -->
-          <div class="lg:col-span-7 space-y-7">
-            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest accent-pill">
-              <span>One Mission. Exceptional Business.</span>
-            </div>
-
-            <h1 class="editorial-serif text-4xl sm:text-6xl lg:text-[4.15rem] leading-[1.06] text-white font-normal">
-              You Built a Successful Business. <span class="italic accent-text">Why Does It Feel Like It Is Running You?</span>
-            </h1>
-
-            <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl">
-              There is a quiet exhaustion that rarely gets discussed in boardrooms. It happens when revenue grows, headcount expands, and your calendar fills—yet every critical decision, client escalation, and stalled campaign still waits for your personal intervention.
-            </p>
-
-            <p class="text-base text-slate-400 leading-relaxed max-w-2xl">
-              Ambition got you here, but sheer personal stamina will not take you to the next stage. Great Business Platforms delivers three specialist programmes for serious business owners, entrepreneurs, and leadership teams—<strong class="text-white font-medium">Business Workflow Development</strong>, <strong class="text-white font-medium">Super Productivity in Marketing with AI</strong>, and <strong class="text-white font-medium">Business Growth</strong>—engineered to replace human fragility with calm, self-sustaining operational architecture.
-            </p>
-
-            <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
-              <a href="#red-team-diagnostic" class="px-6 py-3.5 rounded text-sm font-semibold accent-bg transition text-center">
-                Stress-Test Your Operations
-              </a>
-              <button onclick="openGuideModal()" class="px-6 py-3.5 rounded text-sm font-medium btn-outline text-center">
-                Read the Executive Briefing: The 4 Blindspots
-              </button>
-              <button onclick="switchPrimaryView('about')" class="px-4 py-3.5 text-sm text-slate-300 hover:text-white underline underline-offset-4 transition text-center sm:text-left">
-                About Our Institutional Track Record &rarr;
-              </button>
-            </div>
-
-            <!-- Institutional Metrics Strip -->
-            <div class="pt-6 border-t hairline-divider grid grid-cols-3 gap-6 max-w-xl">
-              <div>
-                <div class="editorial-serif text-3xl text-white">50,000+</div>
-                <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mt-0.5">Professionals Trained</div>
-              </div>
-              <div>
-                <div class="editorial-serif text-3xl text-white">20+ Hrs</div>
-                <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mt-0.5">Reclaimed Weekly / Team</div>
-              </div>
-              <div>
-                <div class="editorial-serif text-3xl text-white">4.9★</div>
-                <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mt-0.5">312+ Corporate Reviews</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Column: Editorial Briefing & Direct Ebook Lead Capture -->
-          <div class="lg:col-span-5">
-            <div class="surface-card rounded-xl p-7 sm:p-8 space-y-6 relative">
-              <div class="flex items-center justify-between border-b hairline-divider pb-4">
-                <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Executive Research Briefing</span>
-                <span class="font-mono text-[11px] text-slate-400">Complimentary Download</span>
-              </div>
-
-              <div class="space-y-3">
-                <h2 class="editorial-serif text-3xl text-white leading-tight">
-                  Before You Scale the Noise: <span class="italic accent-text">The 4 Expensive Blindspots</span>
-                </h2>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                  Before hiring another coordinator or subscribing to another software tool, read this concise diagnostic guide on why capable teams stall—and how to build an operation that breathes without you holding it together.
-                </p>
-              </div>
-
-              <ul class="space-y-2.5 text-xs text-slate-300 border-y hairline-divider py-4">
-                <li class="flex items-start gap-2.5">
-                  <span class="accent-text font-mono">01.</span>
-                  <span><strong class="text-white">The Hero-Leader Bottleneck:</strong> How being the best problem-solver in the room quietly caps your company’s valuation.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="accent-text font-mono">02.</span>
-                  <span><strong class="text-white">Tribal Knowledge Fragility:</strong> Why undocumented habits create existential risk when one key person takes leave.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="accent-text font-mono">03.</span>
-                  <span><strong class="text-white">Random Acts of AI:</strong> Why isolated prompt experiments add clutter instead of commercial output.</span>
-                </li>
-                <li class="flex items-start gap-2.5">
-                  <span class="accent-text font-mono">04.</span>
-                  <span><strong class="text-white">The Silent Pipeline Leak:</strong> How 62% of high-intent inquiries vanish while your team is busy delivering client work.</span>
-                </li>
-              </ul>
-
-              <form name="executive-briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleBriefingSignup(event, 'hero-briefing-feedback')" class="space-y-3">
-                <input type="hidden" name="form-name" value="executive-briefing" />
-                <p class="hidden"><label>Leave this field empty <input name="bot-field" /></label></p>
-                <div>
-                  <label for="hero-name" class="sr-only">Your First Name</label>
-                  <input id="hero-name" name="name" type="text" required placeholder="Your first name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-                </div>
-                <div>
-                  <label for="hero-email" class="sr-only">Your Work Email</label>
-                  <input id="hero-email" name="email" type="email" required placeholder="Your work email address" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-                </div>
-                <button type="submit" class="w-full py-3.5 rounded text-sm font-semibold accent-bg transition">
-                  Send Me The Executive Briefing
-                </button>
-              </form>
-
-              <div id="hero-briefing-feedback" class="hidden p-3.5 rounded surface-elevated text-xs text-slate-200 leading-relaxed"></div>
-
-              <p class="text-[11px] text-slate-400 text-center">
-                Written for founders, managing directors, and department heads. Zero spam.
-              </p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-
-
-      <!-- ========================================================================
-           THREE SPECIALIST PROGRAMMES
-           ======================================================================== -->
-      <section id="programmes" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="max-w-3xl space-y-4 mb-14">
-          <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-            Three Specialist Programmes. Built for Leaders Who Refuse to Settle for Operational Chaos.
-          </h2>
-          <p class="text-base text-slate-300 leading-relaxed">
-            Whether you need to untangle internal bottlenecks, equip your marketing team to produce world-class campaigns in a fraction of the time, or build a predictable commercial engine, each programme is structured around measurable relief and commercial output.
-          </p>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-8">
-
-          <!-- Pillar 1: Business Workflow Development -->
-          <article class="surface-card rounded-xl p-8 flex flex-col justify-between space-y-8">
-            <div class="space-y-5">
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs uppercase tracking-widest accent-text">Programme 01</span>
-                <span class="font-mono text-xs text-slate-400">Operational Liberation</span>
-              </div>
-              <h3 class="editorial-serif text-3xl text-white">Business Workflow Development</h3>
-              <p class="text-sm text-slate-300 leading-relaxed">
-                Most growing businesses are held together by institutional memory and heroic late nights. Most of those habits waste hours and create fragile dependency on specific people showing up every day. We design the calm, automated infrastructure that replaces that fragility.
-              </p>
-              <ul class="space-y-3 pt-2 text-sm text-slate-300 border-t hairline-divider">
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Business process mapping and friction audit</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>AI-powered task and communication automation</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>CRM and tool ecosystem integration</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Standard Operating Procedures (SOPs) for scale</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Recurring manual process elimination</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>End-to-end delivery workflow architecture</span></li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t hairline-divider">
-              <a href="#contact-global-desks" onclick="prefillInquiry('Business Workflow Development Audit')" class="inline-flex items-center justify-between w-full text-xs font-mono uppercase tracking-wider accent-text hover:underline">
-                <span>Discuss Your Workflow Architecture</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Pillar 2: Super Productivity in Marketing with AI -->
-          <article class="surface-card rounded-xl p-8 flex flex-col justify-between space-y-8">
-            <div class="space-y-5">
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs uppercase tracking-widest accent-text">Programme 02</span>
-                <span class="font-mono text-xs text-slate-400">AI Academy • 7 Modules</span>
-              </div>
-              <h3 class="editorial-serif text-3xl text-white">Super Productivity in Marketing with AI</h3>
-              <p class="text-sm text-slate-300 leading-relaxed">
-                Your marketing team does not lack creativity; they are drowning in production bottlenecks. We train professionals and business owners to orchestrate ChatGPT, Claude, Gemini, and Voice AI as a unified production pipeline—with zero coding required.
-              </p>
-              <ul class="space-y-3 pt-2 text-sm text-slate-300 border-t hairline-divider">
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>ChatGPT, Claude &amp; Gemini role specialization</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>High-authority AI content creation at scale</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Automated multi-channel campaign workflows</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Voice AI and synthetic AI video production</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>AI-powered lead generation sequences</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>7 structured modules with practical deployment</span></li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t hairline-divider">
-              <a href="#contact-global-desks" class="inline-flex items-center justify-between w-full text-xs font-mono uppercase tracking-wider accent-text hover:underline">
-                <span>Explore the 7-Module Curriculum</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- Pillar 3: Business Growth -->
-          <article class="surface-card rounded-xl p-8 flex flex-col justify-between space-y-8">
-            <div class="space-y-5">
-              <div class="flex items-center justify-between">
-                <span class="font-mono text-xs uppercase tracking-widest accent-text">Programme 03</span>
-                <span class="font-mono text-xs text-slate-400">S.C.A.L.E Model</span>
-              </div>
-              <h3 class="editorial-serif text-3xl text-white">Business Growth Architecture</h3>
-              <p class="text-sm text-slate-300 leading-relaxed">
-                Nothing drains a leader faster than feast-or-famine revenue—celebrating a record quarter only to stare at an uncertain pipeline thirty days later. We install the deterministic commercial architecture that makes client acquisition calm and repeatable.
-              </p>
-              <ul class="space-y-3 pt-2 text-sm text-slate-300 border-t hairline-divider">
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Go-To-Market strategy (The S.C.A.L.E Model)</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Predictable inbound &amp; outbound lead systems</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>High-converting executive sales funnels</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Email list building and automated nurture</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Digital asset, online course &amp; income systems</span></li>
-                <li class="flex items-start gap-2.5"><span class="accent-text font-mono">—</span><span>Executive mastermind and strategic accountability</span></li>
-              </ul>
-            </div>
-            <div class="pt-4 border-t hairline-divider">
-              <a href="#contact-global-desks" onclick="prefillInquiry('Business Growth & S.C.A.L.E Advisory')" class="inline-flex items-center justify-between w-full text-xs font-mono uppercase tracking-wider accent-text hover:underline">
-                <span>Book a Growth Strategy Session</span>
-                <span>&rarr;</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ========================================================================
-           INTERACTIVE RED-TEAM OPERATIONAL DIAGNOSTIC ENGINE
-           ======================================================================== -->
-      <section id="red-team-diagnostic" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-
-          <div class="lg:col-span-5 space-y-6">
-            <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-              Where Is Your Business Quietly Leaking Energy?
-            </h2>
-            <p class="text-base text-slate-300 leading-relaxed">
-              In high-reliability engineering, a “Red Team” stress-tests a system to uncover hidden single points of failure before they fracture under pressure. Select the reality that feels closest to your current week, or describe your operational bottleneck below.
-            </p>
-            <p class="text-xs font-mono uppercase tracking-wider text-slate-400">
-              Zero data retention • Instant architectural prescription
-            </p>
-
-            <!-- Relatable Red-Team Scenarios -->
-            <div class="space-y-2.5 pt-2">
-              <span class="block text-xs font-mono uppercase tracking-wider text-slate-400">Select a Common Leadership Stress Test:</span>
-              <button type="button" onclick="loadRedTeamScenario('founder')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>01. “Every major decision or client escalation still lands on my desk.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-              <button type="button" onclick="loadRedTeamScenario('pipeline')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>02. “Leads go cold whenever the team gets busy delivering client work.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-              <button type="button" onclick="loadRedTeamScenario('marketing')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>03. “Our marketing takes too long and we aren’t using AI systematically.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-              <button type="button" onclick="loadRedTeamScenario('fragility')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>04. “If one key person takes two weeks off, delivery slows to a crawl.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Interactive Blueprint Generator Output -->
-          <div class="lg:col-span-7">
-            <div class="surface-card rounded-xl p-7 sm:p-9 space-y-6">
-              <div class="flex items-center justify-between border-b hairline-divider pb-4">
-                <span class="font-mono text-xs uppercase tracking-widest accent-text">Architectural Blueprint Engine</span>
-                <span id="diagnostic-status" class="font-mono text-xs text-slate-400">Ready for Input</span>
-              </div>
-
-              <div class="space-y-3">
-                <label for="diagnostic-input" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                  Describe Your Current Bottleneck or Growth Objective:
-                </label>
-                <textarea id="diagnostic-input" rows="3" class="w-full p-4 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" placeholder="e.g., Client onboarding is manual across email and spreadsheets, and I spend 15 hours a week chasing status updates instead of closing partnerships..."></textarea>
-                <div class="flex flex-wrap items-center justify-between gap-3">
-                  <button type="button" onclick="generateDiagnosticBlueprint()" class="px-6 py-3 rounded text-xs font-mono uppercase tracking-wider font-semibold accent-bg transition">
-                    Generate AI Blueprint
-                  </button>
-                  <span class="text-xs text-slate-400">Maps directly across our 3 core programmes</span>
-                </div>
-              </div>
-
-              <!-- Dynamic Output Container -->
-              <div id="diagnostic-output" class="space-y-5 pt-4 border-t hairline-divider">
-                <div class="p-5 rounded surface-elevated space-y-2">
-                  <div class="font-mono text-[11px] uppercase tracking-widest accent-text">Human &amp; Commercial Diagnosis</div>
-                  <p id="diag-empathy" class="text-sm text-slate-200 leading-relaxed">
-                    Select one of the four stress-test scenarios on the left—or type your own situation above and click <strong class="text-white">Generate AI Blueprint</strong>—to see the exact three-phase intervention across our programmes.
-                  </p>
-                </div>
-
-                <div class="grid sm:grid-cols-3 gap-4">
-                  <div class="p-4 rounded bg-[#080A0F] border hairline-divider space-y-1.5">
-                    <span class="font-mono text-[10px] uppercase tracking-widest accent-text">Phase 01: Stabilise</span>
-                    <h4 id="diag-phase-1-title" class="text-sm font-semibold text-white">Workflow Audit</h4>
-                    <p id="diag-phase-1-desc" class="text-xs text-slate-400 leading-relaxed">Isolate the manual handoffs draining executive attention.</p>
-                  </div>
-                  <div class="p-4 rounded bg-[#080A0F] border hairline-divider space-y-1.5">
-                    <span class="font-mono text-[10px] uppercase tracking-widest accent-text">Phase 02: Automate</span>
-                    <h4 id="diag-phase-2-title" class="text-sm font-semibold text-white">AI &amp; Tool Routing</h4>
-                    <p id="diag-phase-2-desc" class="text-xs text-slate-400 leading-relaxed">Connect CRM, email triage, and Voice AI response agents.</p>
-                  </div>
-                  <div class="p-4 rounded bg-[#080A0F] border hairline-divider space-y-1.5">
-                    <span class="font-mono text-[10px] uppercase tracking-widest accent-text">Phase 03: Scale</span>
-                    <h4 id="diag-phase-3-title" class="text-sm font-semibold text-white">Team Enablement</h4>
-                    <p id="diag-phase-3-desc" class="text-xs text-slate-400 leading-relaxed">Install SOPs so your business runs smoothly without you.</p>
-                  </div>
-                </div>
-
-                <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
-                  <a href="#contact-global-desks" onclick="prefillInquiry('Custom Diagnostic Blueprint Review')" class="text-xs font-mono uppercase tracking-wider accent-text hover:underline">
-                    Review This Blueprint in a Free 30-Min Session &rarr;
-                  </a>
-                  <button type="button" onclick="openGuideModal()" class="text-xs text-slate-400 hover:text-white underline">
-                    Or download The 4 Expensive Blindspots Guide
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ========================================================================
-           4-STAGE WORKFLOW ARCHITECTURE
-           ======================================================================== -->
-      <section id="workflow-architecture" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="max-w-3xl space-y-4 mb-14">
-          <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-            Your Business Should Run Without You Holding It Together.
-          </h2>
-          <p class="text-base text-slate-300 leading-relaxed">
-            Great Business Platforms maps every core process, identifies what intelligent automation can shoulder, and builds the infrastructure that lets your organisation operate at scale with far less human exhaustion per output.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="surface-card rounded-xl p-7 space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest accent-text">Stage 01</span>
-            <h3 class="editorial-serif text-2xl text-white">Process Audit</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              We sit with your reality and map every recurring task in your business—uncovering the hidden bottlenecks, unwritten tribal habits, and approval delays that quietly steal twenty hours a week.
-            </p>
-          </div>
-
-          <div class="surface-card rounded-xl p-7 space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest accent-text">Stage 02</span>
-            <h3 class="editorial-serif text-2xl text-white">System Design</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              We design a clean, resilient workflow architecture: defining exactly which tools connect, in what sequence, with what automated triggers, and where human judgment truly adds value.
-            </p>
-          </div>
-
-          <div class="surface-card rounded-xl p-7 space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest accent-text">Stage 03</span>
-            <h3 class="editorial-serif text-2xl text-white">Build and Deploy</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              We connect AI directly into your email triage, proposal drafting, calendar scheduling, CRM, and customer data enrichment pipelines—stress-tested for reliability before going live.
-            </p>
-          </div>
-
-          <div class="surface-card rounded-xl p-7 space-y-4">
-            <span class="font-mono text-xs uppercase tracking-widest accent-text">Stage 04</span>
-            <h3 class="editorial-serif text-2xl text-white">Team Enablement</h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Technology fails when people feel intimidated by it. We equip your team with clear Standard Operating Procedures (SOPs) and hands-on training so the system becomes second nature.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ========================================================================
-           FREQUENTLY ASKED QUESTIONS
-           ======================================================================== -->
-      <section id="faqs" class="max-w-5xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="space-y-4 mb-12">
-          <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-            Everything You Need to Know About Our Programmes, Tools, and Results.
-          </h2>
-        </div>
-
-        <div class="space-y-4">
-          <details class="surface-card rounded-xl p-6 group" open>
-            <summary class="flex items-center justify-between cursor-pointer list-none font-medium text-base text-white">
-              <span>What does Great Business Platforms do?</span>
-              <span class="accent-text font-mono text-lg group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
-              Great Business Platforms delivers three specialist programmes for serious business owners, entrepreneurs, and teams: <strong class="text-white">Business Workflow Development</strong>, <strong class="text-white">Super Productivity in Marketing with AI</strong>, and <strong class="text-white">Business Growth</strong>. We replace fragile, manual ways of working with calm, automated operational and commercial systems.
-            </p>
-          </details>
-
-          <details class="surface-card rounded-xl p-6 group">
-            <summary class="flex items-center justify-between cursor-pointer list-none font-medium text-base text-white">
-              <span>What is Business Workflow Development?</span>
-              <span class="accent-text font-mono text-lg group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
-              It is a four-stage operational programme (Process Audit, System Design, Build &amp; Deploy, and Team Enablement) where we map every recurring task in your organisation, connect your CRM and communication tools, and automate repetitive handoffs so your business runs smoothly without depending on heroic daily intervention.
-            </p>
-          </details>
-
-          <details class="surface-card rounded-xl p-6 group">
-            <summary class="flex items-center justify-between cursor-pointer list-none font-medium text-base text-white">
-              <span>What is Super Productivity in Marketing with AI, and does it require coding skills?</span>
-              <span class="accent-text font-mono text-lg group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
-              None at all. It teaches marketing professionals and business owners to deploy ChatGPT, Claude, Gemini, and Voice AI Agents across 7 structured modules to produce better marketing output faster, with zero coding required. Over 50,000+ learners have been trained with a 4.9-star satisfaction rating.
-            </p>
-          </details>
-
-          <details class="surface-card rounded-xl p-6 group">
-            <summary class="flex items-center justify-between cursor-pointer list-none font-medium text-base text-white">
-              <span>How do we begin or choose the right programme for our current stage?</span>
-              <span class="accent-text font-mono text-lg group-open:rotate-45 transition-transform">+</span>
-            </summary>
-            <p class="mt-4 text-sm text-slate-300 leading-relaxed">
-              For Super Productivity in Marketing with AI, you can explore our 7-module AI Academy curriculum. For Business Workflow Development or Business Growth coaching, book a complimentary 30-minute strategy session below or email <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>.
-            </p>
-          </details>
-        </div>
-      </section>
-
-    </main>
-  </div>
-
-  <!-- ==========================================================================
-       VIEW 2: DEDICATED "ABOUT US" TAB
-       ========================================================================== -->
-  <div id="view-about" class="page-view">
-    <main class="ambient-spotlight">
-      <section class="max-w-7xl mx-auto px-6 pt-14 pb-20 border-b hairline-divider">
-
-        <!-- Breadcrumb & Back to Front Page -->
-        <div class="flex flex-wrap items-center justify-between gap-4 pb-8 mb-12 border-b hairline-divider">
-          <div class="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-slate-400">
-            <button onclick="switchPrimaryView('home')" class="hover:text-white transition">Front Page</button>
-            <span>/</span>
-            <span class="accent-text">About Us &amp; Institutional Pedigree</span>
-          </div>
-          <button onclick="switchPrimaryView('home')" class="px-4 py-2 rounded text-xs font-mono uppercase tracking-wider btn-outline">
-            &larr; Return to Main Front Page
-          </button>
-        </div>
-
-        <!-- Original About Us Hero Narrative -->
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-          <div class="lg:col-span-7 space-y-6">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest accent-pill">
-              About Great Business Platforms
-            </span>
-
-            <h1 class="editorial-serif text-4xl sm:text-6xl text-white leading-[1.08]">
-              Over 20 Years of Commercial Leadership, Marketing Transformation &amp; Applied AI Education.
-            </h1>
-
-            <p class="text-lg text-slate-200 leading-relaxed">
-              Great Business Platforms was founded on over 20 years of direct business coaching, marketing transformation, and AI education experience. Led by <strong class="text-white">Sam Onigbanjo</strong>, Great Business Platforms has trained over <strong class="text-white">50,000 learners</strong> and directly coached more than <strong class="text-white">1,000 businesses</strong> across the United Kingdom and internationally.
-            </p>
-
-            <p class="text-base text-slate-300 leading-relaxed">
-              Three specialist programmes—<strong class="text-white">Business Workflow Development</strong>, <strong class="text-white">Super Productivity in Marketing with AI</strong>, and <strong class="text-white">Business Growth</strong>—form a single, cohesive operating system designed to move ambitious organisations from founder-dependent hustle to scalable, deterministic commercial architecture.
-            </p>
-
-            <!-- Institutional Credentials Grid (Original Website Content) -->
-            <div class="grid sm:grid-cols-2 gap-4 pt-4">
-              <div class="surface-card rounded-xl p-5 space-y-1.5">
-                <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Commercial Track Record</span>
-                <h3 class="text-sm font-semibold text-white">£77M Transformation &amp; Global Trade Desks</h3>
-                <p class="text-xs text-slate-300 leading-relaxed">Direct track record delivering £77M Croydon Local Enterprise Growth transformation programmes and advising international trade desks across the UK, Africa, and global markets.</p>
-              </div>
-
-              <div class="surface-card rounded-xl p-5 space-y-1.5">
-                <span class="font-mono text-[11px] uppercase tracking-widest accent-text">Chartered &amp; Academic Pedigree</span>
-                <h3 class="text-sm font-semibold text-white">Fellow (FCIM) &amp; Oxford Postgraduate</h3>
-                <p class="text-xs text-slate-300 leading-relaxed">Chartered Institute of Marketing Fellow (FCIM), Oxford University (Saïd Business School) Venture Finance &amp; Entrepreneurialism alumnus, and Enterprise Nation Accredited Provider.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Founder & Executive Leadership Profile Card (Original Website Content) -->
-          <div class="lg:col-span-5">
-            <div class="surface-card rounded-xl p-8 space-y-6">
-              <div class="flex items-center justify-between border-b hairline-divider pb-4">
-                <div>
-                  <span class="font-mono text-[11px] uppercase tracking-widest accent-text block">Executive Leadership Profile</span>
-                  <h2 class="editorial-serif text-3xl text-white mt-1">Sam Onigbanjo</h2>
-                  <p class="text-xs text-slate-400 font-mono">BSc (Hons), FCIM • Go-To-Market Architect &amp; CEO</p>
-                </div>
-                <div class="w-12 h-12 rounded-full surface-elevated flex items-center justify-center font-serif text-2xl accent-text">
-                  SO
-                </div>
-              </div>
-
-              <p class="text-sm text-slate-300 leading-relaxed">
-                Sam Onigbanjo is the Chief Executive Officer of Great Business Platforms Ltd, Founder of the <strong class="text-white">AI Academy for Beginners</strong> and the <strong class="text-white">Revenue 1st AI Community</strong>, and an internationally recognised Go-To-Market Architect and AI Prompt Engineer.
-              </p>
-
-              <div class="space-y-2.5 text-xs text-slate-300 border-y hairline-divider py-4">
-                <div class="flex items-start gap-2.5">
-                  <span class="accent-text font-mono">•</span>
-                  <span><strong class="text-white">Chartered Institute of Marketing Fellow (FCIM)</strong> — Recognised at the highest tier of international marketing leadership.</span>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <span class="accent-text font-mono">•</span>
-                  <span><strong class="text-white">Enterprise Nation Accredited Provider</strong> — Trusted advisor to high-growth UK SMEs and enterprise teams.</span>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <span class="accent-text font-mono">•</span>
-                  <span><strong class="text-white">Keynote &amp; C-Suite Briefings Globally</strong> — Delivered executive keynotes across London (22 Bishopsgate, Claridge’s, UK Africa Trade Expo, Africa Fashion Week London) and international summits.</span>
-                </div>
-              </div>
-
-              <!-- Original Website Executive Endorsement Quote -->
-              <blockquote class="p-4 rounded surface-elevated space-y-2">
-                <p class="editorial-serif italic text-lg text-white leading-snug">
-                  “Sam Onigbanjo’s ability to decode complex business systems and translate them into actionable, revenue-producing commercial execution is unmatched.”
-                </p>
-                <footer class="font-mono text-[10px] uppercase tracking-widest text-slate-400">
-                  — Executive Client &amp; Corporate Advisory Endorsement
-                </footer>
-              </blockquote>
-
-              <div class="pt-2 flex flex-wrap items-center justify-between gap-3">
-                <a href="#contact-global-desks" onclick="scrollToElement('contact-global-desks')" class="w-full text-center py-3.5 rounded text-xs font-mono uppercase tracking-wider font-semibold accent-bg transition">
-                  Book an Executive Briefing or Keynote
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Original Website Metrics & Institutional Proof Strip -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 pt-12 border-t hairline-divider">
-          <div class="surface-card rounded-xl p-6 space-y-1">
-            <div class="editorial-serif text-4xl accent-text">50,000+</div>
-            <div class="text-sm font-semibold text-white">Learners Trained</div>
-            <p class="text-xs text-slate-400">Across AI Academy modules, corporate workshops, and executive intensives.</p>
-          </div>
-          <div class="surface-card rounded-xl p-6 space-y-1">
-            <div class="editorial-serif text-4xl accent-text">1,000+</div>
-            <div class="text-sm font-semibold text-white">Businesses Coached</div>
-            <p class="text-xs text-slate-400">Direct Go-To-Market, workflow architecture, and commercial growth advisory.</p>
-          </div>
-          <div class="surface-card rounded-xl p-6 space-y-1">
-            <div class="editorial-serif text-4xl accent-text">£77M</div>
-            <div class="text-sm font-semibold text-white">Enterprise Growth Legacy</div>
-            <p class="text-xs text-slate-400">Go-To-Market architecture executed for flagship local enterprise transformation.</p>
-          </div>
-          <div class="surface-card rounded-xl p-6 space-y-1">
-            <div class="editorial-serif text-4xl accent-text">30+</div>
-            <div class="text-sm font-semibold text-white">Countries Served</div>
-            <p class="text-xs text-slate-400">Serving clients across the UK, US, EU, Sub-Saharan Africa, and the Middle East.</p>
-          </div>
-        </div>
-
-      </section>
-    </main>
-  </div>
-
-  <!-- ==========================================================================
-       SHARED BOTTOM OF FRONT PAGE:
-       1. CONTACT & GLOBAL DESKS (ORIGINAL WEBSITE CONTENT)
-       2. PRIVACY POLICY, TERMS & CONDITIONS, REFUND POLICY (INTERACTIVE TABS)
-       3. TARGET SEARCH INDEX & ORIGINAL SITE FOOTER
-       ========================================================================== -->
-
-  <!-- 1. CONTACT & GLOBAL DESKS -->
-  <section id="contact-global-desks" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
-    <div class="grid lg:grid-cols-12 gap-12 items-start">
-
-      <div class="lg:col-span-5 space-y-6">
-        <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-          Send a Direct Briefing or Book Your 30-Min Session.
-        </h2>
-
-        <div class="space-y-4 pt-2 border-t hairline-divider text-sm text-slate-300">
-          <div>
-            <span class="font-mono text-[11px] uppercase tracking-widest accent-text block">Direct Advisory &amp; Booking Desks</span>
-            <p class="mt-0.5">
-              <a href="mailto:aao@greatbusinessplatforms.com" class="text-white hover:underline">aao@greatbusinessplatforms.com</a>
-            </p>
-          </div>
-          <div>
-            <span class="font-mono text-[11px] uppercase tracking-widest accent-text block">Corporate Registration</span>
-            <p class="text-xs text-slate-400">Great Business Platforms Ltd (Registered in England and Wales • Company No. 08660704)</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="lg:col-span-7">
-        <form name="contact-briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleDirectSessionBooking(event)" class="surface-card rounded-xl p-7 sm:p-9 space-y-5">
-          <input type="hidden" name="form-name" value="contact-briefing" />
-          <p class="hidden"><label>Leave this field empty <input name="bot-field" /></label></p>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label for="contact-name" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Your Name *</label>
-              <input id="contact-name" name="name" type="text" required placeholder="Full name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-            </div>
-            <div>
-              <label for="contact-email" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Work Email *</label>
-              <input id="contact-email" name="email" type="email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label for="contact-org" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Organisation</label>
-              <input id="contact-org" name="company" type="text" placeholder="Company or Practice Name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-            </div>
-            <div>
-              <label for="contact-programme" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Primary Focus Area</label>
-              <select id="contact-programme" name="department" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white focus:outline-none focus:border-[#D4AF37]">
-                <option value="Business Workflow Development Audit">Business Workflow Development</option>
-                <option value="Super Productivity in Marketing with AI (AI Academy)">Super Productivity in Marketing with AI</option>
-                <option value="Business Growth & S.C.A.L.E Model">Business Growth (S.C.A.L.E Model)</option>
-                <option value="Voice AI & Agentic Workflow Deployment">Voice AI &amp; Agentic Workflow Deployment</option>
-                <option value="Executive Briefing / Keynote Inquiry">Executive Briefing / Keynote Inquiry</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label for="contact-notes" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">Where Would Relief Matter Most in the Next 90 Days?</label>
-            <textarea id="contact-notes" name="message" rows="3" placeholder="Tell us briefly about your team size, current workflow bottlenecks, or growth targets..." class="w-full p-4 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]"></textarea>
-          </div>
-
-          <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
-            <button type="submit" class="px-7 py-3.5 rounded text-xs font-mono uppercase tracking-wider font-semibold accent-bg transition">
-              Request 30-Minute Strategy Session
-            </button>
-            <span class="text-xs text-slate-400">Protected under UK GDPR • Direct response from our London desk</span>
-          </div>
-
-          <div id="contact-booking-feedback" class="hidden p-4 rounded surface-elevated text-xs text-slate-200 leading-relaxed"></div>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       2. FRONT-PAGE BOTTOM LEGAL & GOVERNANCE HUB:
-          PRIVACY TAB | TERMS & CONDITIONS TAB | REFUND POLICY TAB
-          (Contains the verbatim original website governance content + full policies)
-       ========================================================================== -->
-  <section id="legal-governance-footer" class="max-w-7xl mx-auto px-6 py-16 border-b hairline-divider">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-      <div class="space-y-2">
-        <h2 class="editorial-serif text-3xl sm:text-4xl text-white">
-          Privacy Policy, Terms &amp; Conditions, and Refund Policy
-        </h2>
-        <p class="text-xs text-slate-400">
-          Great Business Platforms Ltd (Registered in England and Wales, No. 08660704)
-        </p>
-      </div>
-
-      <!-- Legal Tabs Switcher -->
-      <div class="flex flex-wrap items-center gap-2" role="tablist">
-        <button id="tab-btn-privacy" onclick="switchLegalTab('privacy')" class="px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider accent-bg font-semibold transition">
-          Privacy Policy
-        </button>
-        <button id="tab-btn-terms" onclick="switchLegalTab('terms')" class="px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider btn-outline transition">
-          Terms &amp; Conditions
-        </button>
-        <button id="tab-btn-refund" onclick="switchLegalTab('refund')" class="px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider btn-outline transition">
-          Refund Policy
-        </button>
-      </div>
-    </div>
-
-    <!-- TAB 1: PRIVACY POLICY (Original Website Verbatim Content + UK GDPR Framework) -->
-    <div id="legal-panel-privacy" class="surface-card rounded-xl p-7 sm:p-9 space-y-6">
-      <div class="flex flex-wrap items-center justify-between gap-2 border-b hairline-divider pb-4">
-        <h3 class="editorial-serif text-2xl text-white">Privacy Policy &amp; UK GDPR Data Protection Notice</h3>
-        <span class="font-mono text-xs accent-text">UK GDPR &amp; Data Protection Act 2018 Compliant</span>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8 text-xs sm:text-sm text-slate-300 leading-relaxed">
-        <div class="space-y-4">
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">1. Data Controller</h4>
-            <p>
-              <strong class="text-white">Data Controller:</strong> Great Business Platforms (Great Business Platforms Ltd, Registered in England and Wales, Company No. 08660704). Contact: <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">2. Information We Collect</h4>
-            <p>
-              When you book a 30-minute strategy session, enrol in AI Academy programmes, download executive briefings, or use our interactive diagnostic tools, we collect only the contact details (name, business email, organisation, and business objectives) you voluntarily provide. Inputs entered into our client-side Red-Team Architectural Diagnostic Engine are processed locally in your browser with zero server-side data retention unless you explicitly submit a booking form.
-            </p>
-          </div>
-        </div>
-
-        <div class="space-y-4">
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">3. How We Use Your Data</h4>
-            <p>
-              Your data is used strictly to deliver requested coaching, workflow audits, training modules, and requested executive communications. <strong class="text-white">We never sell or rent your personal data to third parties.</strong>
-            </p>
-          </div>
-
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">4. Your Statutory Rights Under UK GDPR</h4>
-            <p>
-              You may exercise your right to access, rectify, restrict processing, port, or erase your personal data at any time under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018 by emailing <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>. Every email briefing includes a single-click unsubscribe mechanism.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 2: TERMS & CONDITIONS (Original Website Verbatim Content + Commercial Terms) -->
-    <div id="legal-panel-terms" class="hidden surface-card rounded-xl p-7 sm:p-9 space-y-6">
-      <div class="flex flex-wrap items-center justify-between gap-2 border-b hairline-divider pb-4">
-        <h3 class="editorial-serif text-2xl text-white">Terms &amp; Conditions of Use &amp; Programmes</h3>
-        <span class="font-mono text-xs accent-text">Governing Law: England &amp; Wales</span>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-8 text-xs sm:text-sm text-slate-300 leading-relaxed">
-        <div class="space-y-4">
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">1. Programme Delivery &amp; Membership</h4>
-            <p>
-              Throughout this site, the terms “we”, “us” and “our” refer to <strong class="text-white">Great Business Platforms</strong> (Great Business Platforms Ltd). Enrolments in <strong class="text-white">Super Productivity in Marketing with AI (AI Academy)</strong>, the <strong class="text-white">Revenue 1st AI Community</strong>, <strong class="text-white">Business Workflow Development</strong>, and <strong class="text-white">Business Growth</strong> programmes are subject to our terms of satisfaction, scope of engagement, and access policies as stated upon initial onboarding.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">2. Execution &amp; Results Disclaimer</h4>
-            <p>
-              Great Business Platforms provides battle-tested frameworks, agentic workflow architectures, and strategic coaching. Because commercial outcomes depend on each client’s independent implementation, market conditions, team adoption, and operational discipline, specific revenue or time-saving figures cited in case studies represent historical client benchmarks rather than a guaranteed financial warranty.
-            </p>
-          </div>
-        </div>
-
-        <div class="space-y-4">
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">3. Intellectual Property &amp; Acceptable Use</h4>
-            <p>
-              All proprietary methodologies, including the S.C.A.L.E Model, 7-Module AI Productivity curriculum, diagnostic matrices, SOP templates, and site collateral remain the exclusive intellectual property of Great Business Platforms Ltd. Clients are granted a license for internal business deployment only and may not resell, redistribute, or sublicense training materials without written consent.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="font-mono text-xs uppercase tracking-wider text-white mb-1">4. Governing Law &amp; Contact</h4>
-            <p>
-              These Terms &amp; Conditions and any separate advisory agreements whereby we provide services shall be governed by and construed in accordance with the laws of England and Wales. Questions regarding these Terms should be sent to <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 3: REFUND & CANCELLATION POLICY -->
-    <div id="legal-panel-refund" class="hidden surface-card rounded-xl p-7 sm:p-9 space-y-6">
-      <div class="flex flex-wrap items-center justify-between gap-2 border-b hairline-divider pb-4">
-        <h3 class="editorial-serif text-2xl text-white">Refund, Cancellation &amp; Satisfaction Policy</h3>
-        <span class="font-mono text-xs accent-text">Transparent Client Protection</span>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
-        <div class="space-y-2">
-          <h4 class="font-mono text-xs uppercase tracking-wider text-white">1. Digital Courses &amp; AI Academy Subscriptions</h4>
-          <p>
-            Monthly community and AI Academy memberships may be cancelled at any time prior to the next billing cycle with zero cancellation penalties. Under UK Consumer Contracts Regulations, initial digital programme enrolments include a 14-day cooling-off review window prior to substantial module download or completion, alongside the specific satisfaction terms stated at onboarding.
-          </p>
-        </div>
-
-        <div class="space-y-2">
-          <h4 class="font-mono text-xs uppercase tracking-wider text-white">2. Bespoke Workflow Audits &amp; Advisory</h4>
-          <p>
-            For custom <strong class="text-white">Business Workflow Development</strong> and <strong class="text-white">Business Growth</strong> engagements, deliverables and milestone sign-offs are governed by a formal Statement of Work (SoW). If you need to reschedule an executive workshop or strategy intensive, please provide at least 48 hours’ written notice so we can reallocate engineering and advisory capacity without fee.
-          </p>
-        </div>
-
-        <div class="space-y-2">
-          <h4 class="font-mono text-xs uppercase tracking-wider text-white">3. Direct Resolution Desk</h4>
-          <p>
-            We stand behind the integrity of every system and training programme we deliver. To request a billing adjustment, membership cancellation, or refund review, contact our London support desk directly at <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a> and we will respond within one business day.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       3. ORIGINAL WEBSITE FOOTER & TARGET SEARCH INDEX
-       ========================================================================== -->
-  <footer class="bg-[#06080C] text-slate-400 text-xs">
-    <div class="max-w-7xl mx-auto px-6 py-14 space-y-10">
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 border-b hairline-divider pb-10">
-        <!-- Brand Column -->
-        <div class="space-y-3">
-          <div class="flex items-center gap-3">
-            <div class="w-7 h-7 rounded flex items-center justify-center surface-elevated font-serif text-base accent-text">G</div>
-            <span class="text-white font-semibold tracking-tight text-sm">Great Business Platforms</span>
-          </div>
-          <p class="leading-relaxed text-slate-400">
-            One Mission. Exceptional Business. Delivering Business Workflow Development, Super Productivity in Marketing with AI, and Business Growth architecture.
-          </p>
-        </div>
-
-        <!-- Core Programmes Navigation -->
-        <div class="space-y-2.5">
-          <div class="font-mono text-[11px] uppercase tracking-widest accent-text">Specialist Programmes</div>
-          <ul class="space-y-2">
-            <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Business Workflow Development</a></li>
-            <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Super Productivity in Marketing with AI</a></li>
-            <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Business Growth (S.C.A.L.E Model)</a></li>
-            <li><a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic')" class="hover:text-white transition">Red-Team Operational Diagnostic</a></li>
-          </ul>
-        </div>
-
-        <!-- Original Website Directory Links -->
-        <div class="space-y-2.5">
-          <div class="font-mono text-[11px] uppercase tracking-widest accent-text">Platform Directory</div>
-          <ul class="space-y-2">
-            <li><button onclick="switchPrimaryView('about')" class="hover:text-white transition text-left">About Us &amp; Sam Onigbanjo</button></li>
-            <li><a href="#faqs" onclick="navigateSection('faqs')" class="hover:text-white transition">Frequently Asked Questions</a></li>
-            <li><a href="#contact-global-desks" onclick="scrollToElement('contact-global-desks')" class="hover:text-white transition">Contact &amp; Global Desks</a></li>
-          </ul>
-        </div>
-
-        <!-- Legal & Governance Direct Links -->
-        <div class="space-y-2.5">
-          <div class="font-mono text-[11px] uppercase tracking-widest accent-text">Privacy, Terms &amp; Refund</div>
-          <ul class="space-y-2">
-            <li><a href="#legal-governance-footer" onclick="openSpecificLegalTab('privacy')" class="hover:text-white transition">Privacy Policy (UK GDPR)</a></li>
-            <li><a href="#legal-governance-footer" onclick="openSpecificLegalTab('terms')" class="hover:text-white transition">Terms &amp; Conditions of Use</a></li>
-            <li><a href="#legal-governance-footer" onclick="openSpecificLegalTab('refund')" class="hover:text-white transition">Refund &amp; Cancellation Policy</a></li>
-            <li><button onclick="openGuideModal()" class="hover:text-white transition text-left">The 4 Expensive Blindspots Guide</button></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Original Website Target Search Index (AEO & Semantic Entity Indexing) -->
-      <div class="space-y-2 border-b hairline-divider pb-8">
-        <div class="font-mono text-[10px] uppercase tracking-widest text-slate-500">Target Search Index</div>
-        <p class="text-[11px] text-slate-500 leading-relaxed">
-          • AI voice assistant for business • Conversational AI agents • Real-time text to speech API • How do AI voice agents work • Agentic workflow automation • Business Workflow Development • Super Productivity in Marketing with AI • S.C.A.L.E Model business growth • Multi-LLM marketing operations • Standard Operating Procedures (SOPs) for team scale.
-        </p>
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 text-center sm:text-left">
-        <div class="break-words">
-          &copy; <span id="current-year">2026</span> Great Business Platforms Ltd. All rights reserved. Registered in England &amp; Wales (No. 08660704).
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
-          <a href="mailto:aao@greatbusinessplatforms.com" class="hover:text-slate-300 transition break-all">aao@greatbusinessplatforms.com</a>
-          <span>•</span>
-          <button onclick="switchPrimaryView('about')" class="hover:text-slate-300 transition">About Us</button>
-          <span>•</span>
-          <a href="#legal-governance-footer" onclick="openSpecificLegalTab('privacy')" class="hover:text-slate-300 transition">Privacy</a>
-          <span>•</span>
-          <a href="#legal-governance-footer" onclick="openSpecificLegalTab('terms')" class="hover:text-slate-300 transition">Terms</a>
-          <span>•</span>
-          <a href="#legal-governance-footer" onclick="openSpecificLegalTab('refund')" class="hover:text-slate-300 transition">Refund Policy</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- ==========================================================================
-       MODAL: THE 4 EXPENSIVE BLINDSPOTS EXECUTIVE BRIEFING OPT-IN
-       ========================================================================== -->
-  <div id="guide-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
-    <div class="surface-elevated rounded-xl max-w-lg w-full p-7 sm:p-8 space-y-5 relative">
-      <button onclick="closeGuideModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white font-mono text-sm">✕</button>
-      <h3 class="editorial-serif text-3xl text-white leading-tight">
-        Download “The 4 Expensive Blindspots”
-      </h3>
-      <p class="text-sm text-slate-300 leading-relaxed">
-        Learn where ambitious organisations unintentionally build founder dependency, how to connect multi-LLM workflows without losing your brand’s human voice, and the four-stage blueprint for operational calm.
-      </p>
-      <form name="executive-briefing" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleBriefingSignup(event, 'modal-briefing-feedback')" class="space-y-3">
-        <input type="hidden" name="form-name" value="executive-briefing" />
-                <p class="hidden"><label>Leave this field empty <input name="bot-field" /></label></p>
-        <input name="name" type="text" required placeholder="Your first name" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-        <input name="email" type="email" required placeholder="Your work email address" class="w-full px-4 py-3 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" />
-        <button type="submit" class="w-full py-3.5 rounded text-sm font-semibold accent-bg transition">
-          Send Me The Executive Guide
-        </button>
-      </form>
-      <div id="modal-briefing-feedback" class="hidden p-3.5 rounded surface-card text-xs text-slate-200 leading-relaxed"></div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       APPLICATION LOGIC: VIEW SWITCHING, LEGAL TABS, RED-TEAM ENGINE
-       ========================================================================== -->
-  <script>
-    // Set current copyright year
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // 1. Primary View Switcher (Front Page vs Dedicated "About Us" Tab)
-    function toggleMobileNav() {
-      const nav = document.getElementById('mobile-nav');
-      const btn = document.getElementById('mobile-nav-toggle');
-      const openIcon = document.getElementById('mobile-nav-icon-open');
-      const closeIcon = document.getElementById('mobile-nav-icon-close');
-      if (!nav) return;
-      const willOpen = nav.classList.contains('hidden');
-      nav.classList.toggle('hidden', !willOpen);
-      if (btn) btn.setAttribute('aria-expanded', String(willOpen));
-      if (openIcon) openIcon.classList.toggle('hidden', willOpen);
-      if (closeIcon) closeIcon.classList.toggle('hidden', !willOpen);
-    }
-
-    function closeMobileNav() {
-      const nav = document.getElementById('mobile-nav');
-      const btn = document.getElementById('mobile-nav-toggle');
-      const openIcon = document.getElementById('mobile-nav-icon-open');
-      const closeIcon = document.getElementById('mobile-nav-icon-close');
-      if (nav) nav.classList.add('hidden');
-      if (btn) btn.setAttribute('aria-expanded', 'false');
-      if (openIcon) openIcon.classList.remove('hidden');
-      if (closeIcon) closeIcon.classList.add('hidden');
-    }
-
-    function switchPrimaryView(viewName) {
-      const homeView = document.getElementById('view-home');
-      const aboutView = document.getElementById('view-about');
-      const aboutTabBtn = document.getElementById('nav-about-tab');
-
-      if (viewName === 'about') {
-        homeView.classList.remove('active');
-        aboutView.classList.add('active');
-        if (aboutTabBtn) {
-          aboutTabBtn.classList.add('accent-bg', 'font-semibold');
-        }
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        aboutView.classList.remove('active');
-        homeView.classList.add('active');
-        if (aboutTabBtn) {
-          aboutTabBtn.classList.remove('accent-bg', 'font-semibold');
-        }
-      }
-    }
-
-    function navigateSection(sectionId) {
-      switchPrimaryView('home');
-      setTimeout(() => {
-        scrollToElement(sectionId);
-      }, 60);
-    }
-
-    function scrollToElement(elementId) {
-      const el = document.getElementById(elementId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    // 2. Bottom Legal & Governance Tab Switcher (Privacy | Terms | Refund)
-    function switchLegalTab(tabKey) {
-      const tabs = ['privacy', 'terms', 'refund'];
-      tabs.forEach(key => {
-        const panel = document.getElementById('legal-panel-' + key);
-        const btn = document.getElementById('tab-btn-' + key);
-        if (key === tabKey) {
-          panel.classList.remove('hidden');
-          btn.classList.remove('btn-outline');
-          btn.classList.add('accent-bg', 'font-semibold');
-        } else {
-          panel.classList.add('hidden');
-          btn.classList.remove('accent-bg', 'font-semibold');
-          btn.classList.add('btn-outline');
-        }
-      });
-    }
-
-    function openSpecificLegalTab(tabKey) {
-      switchLegalTab(tabKey);
-      scrollToElement('legal-governance-footer');
-    }
-
-    // 3. Red-Team Operational Diagnostic Presets & Custom Blueprint Generator
-    const redTeamScenarios = {
-      founder: {
-        input: "Every major client escalation, pricing approval, and operational handoff still lands on my desk. I am working late every evening just to keep delivery moving.",
-        empathy: "You are carrying the ‘Hero-Leader Tax.’ Because you care deeply about standards, your organisation has quietly wired its workflows around your personal availability rather than documented systems.",
-        p1Title: "Decision & Escalation Audit",
-        p1Desc: "Map the top 15 recurring questions landing on your desk and convert 80% into clear decision trees.",
-        p2Title: "Automated Triage & CRM Routing",
-        p2Desc: "Deploy AI email triage and automated status updates so client handoffs happen without manual chasing.",
-        p3Title: "Role-Specific Team SOPs",
-        p3Desc: "Train your team on clear ownership boundaries so you reclaim 15+ hours of strategic leadership time weekly."
-      },
-      pipeline: {
-        input: "Whenever our team gets busy delivering client projects, outbound prospecting stops and inbound leads wait 24–48 hours for a proper response.",
-        empathy: "This is the classic feast-or-famine trap. When the same human energy is required to both deliver client work and nurture new inquiries, revenue inevitably becomes a rollercoaster.",
-        p1Title: "S.C.A.L.E Pipeline Audit",
-        p1Desc: "Isolate every point where high-intent inquiries stall between first contact and booked discovery call.",
-        p2Title: "24/7 Voice AI & Lead Nurture",
-        p2Desc: "Deploy a conversational Voice AI assistant and automated email sequences so every lead is answered in seconds.",
-        p3Title: "Deterministic Growth Engine",
-        p3Desc: "Establish weekly pipeline telemetry that runs continuously even during peak client delivery weeks."
-      },
-      marketing: {
-        input: "Our marketing team spends all week producing a handful of posts and emails. We have tried ChatGPT, but the output feels generic and disconnected.",
-        empathy: "Random acts of AI create more editing work, not less. Without multi-model role specialisation and brand voice governance, teams quickly burn out on generic prompts.",
-        p1Title: "Editorial & Brand Voice Codex",
-        p1Desc: "Codify your institutional authority, customer empathy triggers, and legal compliance boundaries.",
-        p2Title: "Multi-LLM Production Pipeline",
-        p2Desc: "Connect Gemini, Claude, and ChatGPT into a 7-module workflow for research, copy, video, and landing pages.",
-        p3Title: "20+ Hours Saved Weekly",
-        p3Desc: "Upskill your team to produce a full month of authoritative multi-channel campaigns in a single afternoon."
-      },
-      fragility: {
-        input: "Critical client onboarding and fulfilment steps live inside the heads of two senior staff members. If either takes two weeks off, delivery slows to a crawl.",
-        empathy: "Tribal knowledge is the silent vulnerability of growing firms. Relying on unwritten habits is unfair to your best people and risky for your clients.",
-        p1Title: "Tribal Knowledge Extraction",
-        p1Desc: "Record and map the exact steps your top performers take across onboarding, fulfilment, and reporting.",
-        p2Title: "Agentic Workflow Automation",
-        p2Desc: "Automate repetitive data entry, proposal generation, and cross-platform CRM triggers.",
-        p3Title: "Turnkey Operations Manual",
-        p3Desc: "Install living SOPs so any qualified team member can step in seamlessly without quality dropping."
-      }
-    };
-
-    function loadRedTeamScenario(key) {
-      const data = redTeamScenarios[key];
-      if (!data) return;
-      document.getElementById('diagnostic-input').value = data.input;
-      renderDiagnosticResult(data);
-    }
-
-    function generateDiagnosticBlueprint() {
-      const raw = document.getElementById('diagnostic-input').value.trim();
-      const lower = raw.toLowerCase();
-
-      if (!raw) {
-        loadRedTeamScenario('founder');
-        return;
-      }
-
-      if (lower.includes('lead') || lower.includes('sales') || lower.includes('pipeline') || lower.includes('call')) {
-        loadRedTeamScenario('pipeline');
-      } else if (lower.includes('market') || lower.includes('content') || lower.includes('chatgpt') || lower.includes('video')) {
-        loadRedTeamScenario('marketing');
-      } else if (lower.includes('staff') || lower.includes('team') || lower.includes('onboarding') || lower.includes('sop')) {
-        loadRedTeamScenario('fragility');
-      } else {
-        renderDiagnosticResult({
-          empathy: "Your description points to structural friction between leadership ambition and daily execution. When workflows grow organically without deliberate architecture, your best people spend their days compensating for disconnected tools.",
-          p1Title: "Stage 01 Process Audit",
-          p1Desc: "Map every manual handoff and approval bottleneck mentioned in your brief to quantify weekly hours lost.",
-          p2Title: "Agentic AI & CRM Integration",
-          p2Desc: "Deploy targeted automation across your communications, marketing output, and client onboarding.",
-          p3Title: "S.C.A.L.E & Team Enablement",
-          p3Desc: "Equip your team with documented SOPs and AI Academy training for calm, repeatable execution."
-        });
-      }
-    }
-
-    function renderDiagnosticResult(data) {
-      document.getElementById('diagnostic-status').textContent = 'Blueprint Generated';
-      document.getElementById('diag-empathy').textContent = data.empathy;
-      document.getElementById('diag-phase-1-title').textContent = data.p1Title;
-      document.getElementById('diag-phase-1-desc').textContent = data.p1Desc;
-      document.getElementById('diag-phase-2-title').textContent = data.p2Title;
-      document.getElementById('diag-phase-2-desc').textContent = data.p2Desc;
-      document.getElementById('diag-phase-3-title').textContent = data.p3Title;
-      document.getElementById('diag-phase-3-desc').textContent = data.p3Desc;
-    }
-
-    // 4. Ebook & Strategy Session Lead Routing
-    function handleBriefingSignup(event, feedbackId) {
-      event.preventDefault();
-      const form = event.target;
-      const box = document.getElementById(feedbackId);
-      const button = form.querySelector('button[type="submit"]');
-      const label = button.textContent;
-      button.disabled = true;
-      button.textContent = 'Sending...';
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
-      })
-        .then(response => {
-          if (!response.ok) throw new Error('Submission failed');
-          box.classList.remove('hidden');
-          box.innerHTML = '<strong>Thank you.</strong> Your request for <em>The 4 Expensive Blindspots</em> has reached us, and the briefing will be sent to your inbox.';
-          form.reset();
-        })
-        .catch(() => {
-          box.classList.remove('hidden');
-          box.innerHTML = 'Sorry, your request did not send. Please email <a href="mailto:aao@greatbusinessplatforms.com?subject=Executive%20Briefing" class="accent-text underline">aao@greatbusinessplatforms.com</a> and we will send the briefing.';
-        })
-        .finally(() => {
-          button.disabled = false;
-          button.textContent = label;
-        });
-    }
-
-    function prefillInquiry(programmeName) {
-      switchPrimaryView('home');
-      const select = document.getElementById('contact-programme');
-      if (select) {
-        for (let i = 0; i < select.options.length; i++) {
-          if (select.options[i].value.includes(programmeName) || programmeName.includes(select.options[i].value)) {
-            select.selectedIndex = i;
-            break;
-          }
-        }
-      }
-      scrollToElement('contact-global-desks');
-    }
-
-    function handleDirectSessionBooking(event) {
-      event.preventDefault();
-      const form = event.target;
-      const name = document.getElementById('contact-name').value.trim();
-      const feedback = document.getElementById('contact-booking-feedback');
-      const button = form.querySelector('button[type="submit"]');
-      const label = button.textContent;
-      button.disabled = true;
-      button.textContent = 'Sending...';
-
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
-      })
-        .then(response => {
-          if (!response.ok) throw new Error('Submission failed');
-          feedback.classList.remove('hidden');
-          feedback.textContent = 'Thank you, ' + name + '. Your request has reached our advisory desk and we will reply within one business day.';
-          form.reset();
-        })
-        .catch(() => {
-          feedback.classList.remove('hidden');
-          feedback.innerHTML = 'Sorry, your request did not send. Please email <a href="mailto:aao@greatbusinessplatforms.com" class="accent-text underline">aao@greatbusinessplatforms.com</a> directly.';
-        })
-        .finally(() => {
-          button.disabled = false;
-          button.textContent = label;
-        });
-    }
-
-    // 5. Modal Controls
-    function openGuideModal() {
-      const m = document.getElementById('guide-modal');
-      m.classList.remove('hidden');
-      m.classList.add('flex');
-    }
-
-    function closeGuideModal() {
-      const m = document.getElementById('guide-modal');
-      m.classList.add('hidden');
-      m.classList.remove('flex');
-    }
-  </script>
+<body>
+<div style="font-family: Inter, system-ui, sans-serif; color: #0B1F3A; background: #F6F8FB; font-size: 17px; line-height: 1.6">
+
+<!-- Top bar -->
+<div style="background: #0B1F3A; color: #C8D1DE; font-size: 14px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+<span>Enterprise Nation Accredited Provider</span>
+<a href="#contact" style="color: #C9A55A; text-decoration: none; font-weight: 500">Free 30-minute strategy session</a>
+</div>
+</div>
+
+<!-- Navigation -->
+<header style="background: #FFFFFF; border-bottom: 1px solid #E3E8EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #0B1F3A">
+<span style="width: 40px; height: 40px; border-radius: 8px; background: #0B1F3A; color: #C9A55A; display: flex; align-items: center; justify-content: center; font-family: Newsreader, Georgia, serif; font-size: 22px; font-weight: 600">G</span>
+<span style="display: flex; flex-direction: column; line-height: 1.2">
+<span style="font-family: Newsreader, Georgia, serif; font-size: 21px; font-weight: 600">Great Business Platforms</span>
+<span style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5568">AI consultancy and training</span>
+</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px; font-weight: 500">
+<a href="#services" style="text-decoration: none; padding: 10px 0">Services</a>
+<a href="#voice-ai" style="text-decoration: none; padding: 10px 0">Voice AI</a>
+<a href="#approach" style="text-decoration: none; padding: 10px 0">Approach</a>
+<a href="#results" style="text-decoration: none; padding: 10px 0">Results</a>
+<a href="#faqs" style="text-decoration: none; padding: 10px 0">FAQs</a>
+</nav>
+<a href="#contact" style="background: #0B1F3A; color: #FFFFFF; text-decoration: none; padding: 12px 22px; border-radius: 6px; font-size: 15px; font-weight: 600">Book a strategy session</a>
+</div>
+</header>
+
+<!-- Hero -->
+<section id="top" style="background: #0B1F3A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 104px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 999 1 560px; min-width: 0">
+<p style="margin: 0 0 20px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A55A; font-weight: 600">UK AI consultancy · Workflow, training, growth</p>
+<h1 style="margin: 0 0 24px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(40px, 5.4vw, 68px); line-height: 1.05; letter-spacing: -0.01em">AI that earns its place in your business.</h1>
+<p style="margin: 0 0 36px; font-size: 19px; color: #C8D1DE; max-width: 600px">We find where AI pays, build the systems that run it, and train the people who own it. Fewer manual hours, a steadier pipeline, and numbers you can show your board.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 14px">
+<a href="#contact" style="background: #C9A55A; color: #0B1F3A; text-decoration: none; padding: 16px 28px; border-radius: 6px; font-weight: 600">Book a free 30-minute session</a>
+<a href="#services" style="border: 1px solid #5B6B85; color: #FFFFFF; text-decoration: none; padding: 15px 28px; border-radius: 6px; font-weight: 500">See our services</a>
+</div>
+</div>
+<div style="flex: 1 1 340px; min-width: 0; background: #12294A; border: 1px solid #23395C; border-radius: 12px; padding: 32px">
+<p style="margin: 0 0 24px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #9FB0C8">Track record</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px">
+<div><div style="font-family: Newsreader, Georgia, serif; font-size: 42px; line-height: 1; color: #C9A55A">5,000+</div><div style="margin-top: 8px; font-size: 14px; color: #C8D1DE">GBP clients trained</div></div>
+<div><div style="font-family: Newsreader, Georgia, serif; font-size: 42px; line-height: 1; color: #C9A55A">1,000+</div><div style="margin-top: 8px; font-size: 14px; color: #C8D1DE">Businesses coached</div></div>
+<div><div style="font-family: Newsreader, Georgia, serif; font-size: 42px; line-height: 1; color: #C9A55A">20+ yrs</div><div style="margin-top: 8px; font-size: 14px; color: #C8D1DE">Enterprise transformation</div></div>
+<div><div style="font-family: Newsreader, Georgia, serif; font-size: 42px; line-height: 1; color: #C9A55A">3</div><div style="margin-top: 8px; font-size: 14px; color: #C8D1DE">Continents served</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Credibility strip -->
+<section aria-label="Recognition" style="background: #FFFFFF; border-bottom: 1px solid #E3E8EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: center; justify-content: center; font-size: 15px; color: #4A5568">
+<span style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A6420; font-weight: 600">Featured and speaking at</span>
+<span style="font-weight: 600">Business Insider</span>
+<span style="font-weight: 600">Newsweek</span>
+<span style="font-weight: 600">CNBC</span>
+<span style="font-weight: 600">Sky TV</span>
+<span style="font-weight: 600">Barclays</span>
+<span style="font-weight: 600">Kaspersky</span>
+</div>
+</section>
+
+<!-- Problem -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 112px 24px 96px">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-end; margin-bottom: 56px">
+<div style="flex: 1 1 480px; min-width: 0">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600">Why AI projects stall</p>
+<h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1">AI projects stall long before the build starts.</h2>
+</div>
+<p style="flex: 1 1 360px; min-width: 0; margin: 0; color: #4A5568">We see the same four gaps in almost every stalled AI project. Close them first and the technology becomes the easy part.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: #E3E8EF; border: 1px solid #E3E8EF; border-radius: 12px; overflow: hidden">
+<div style="background: #FFFFFF; padding: 32px 28px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #8A6420; margin-bottom: 12px">01</div><h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 600">No customer evidence</h3><p style="margin: 0; color: #4A5568; font-size: 16px">Teams solve the problem they assume exists, not the one customers actually complain about.</p></div>
+<div style="background: #FFFFFF; padding: 32px 28px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #8A6420; margin-bottom: 12px">02</div><h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 600">No cost of inaction</h3><p style="margin: 0; color: #4A5568; font-size: 16px">If the problem is never priced in hours and pounds, it never earns urgency or budget.</p></div>
+<div style="background: #FFFFFF; padding: 32px 28px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #8A6420; margin-bottom: 12px">03</div><h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 600">Wrong tool for the task</h3><p style="margin: 0; color: #4A5568; font-size: 16px">Months go into complex models for work a simple automation or a clear process could fix.</p></div>
+<div style="background: #FFFFFF; padding: 32px 28px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #8A6420; margin-bottom: 12px">04</div><h3 style="margin: 0 0 10px; font-size: 18px; font-weight: 600">No agreed measure</h3><p style="margin: 0; color: #4A5568; font-size: 16px">Without a baseline set in advance, nobody can prove the return, and the next budget disappears.</p></div>
+</div>
+</section>
+
+<!-- SME AI Readiness Index -->
+<section aria-labelledby="index-h" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 112px">
+<div style="background: #FFFFFF; border: 1px solid #E3E8EF; border-radius: 12px; padding: 48px 40px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
+<div style="flex: 999 1 420px; min-width: 0">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600">Our research · SME AI Readiness Index 2026</p>
+<h2 id="index-h" style="margin: 0 0 16px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.12">Most SMEs have tried AI. Few have built it into how they work.</h2>
+<p style="margin: 0 0 24px; color: #4A5568">Our index scores how ready small and medium businesses are to use AI, by sector, region and gender. Sources: OECD, JPMorgan Chase Institute, Federal Reserve, Deloitte and World Bank.</p>
+<a href="https://smeaireadinessindex.com" style="font-weight: 600; color: #0B1F3A">Check your readiness score</a>
+</div>
+<div style="flex: 1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div><div style="font-family: Newsreader, Georgia, serif; font-size: 46px; line-height: 1; color: #0B1F3A">47<span style="font-size: 22px; color: #4A5568">/100</span></div><div style="margin-top: 10px; font-size: 14px; color: #4A5568">2026 global readiness score</div></div>
+<div><div style="font-family: Newsreader, Georgia, serif; font-size: 46px; line-height: 1; color: #0B1F3A">61%</div><div style="margin-top: 10px; font-size: 14px; color: #4A5568">of SMEs have touched AI</div></div>
+<div><div style="font-family: Newsreader, Georgia, serif; font-size: 46px; line-height: 1; color: #8A6420">24%</div><div style="margin-top: 10px; font-size: 14px; color: #4A5568">have integrated it</div></div>
+</div>
+</div>
+</section>
+
+<!-- Services -->
+<section id="services" style="background: #FFFFFF; border-top: 1px solid #E3E8EF; border-bottom: 1px solid #E3E8EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600">What we do</p>
+<h2 style="margin: 0 0 56px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; max-width: 760px">Three practices. Build it, run it, grow it.</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px">
+
+<article style="border: 1px solid #E3E8EF; border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px; background: #FFFFFF">
+<svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8A6420" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><path d="M10 6.5h4a3 3 0 0 1 3 3V14"></path></svg>
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5568; font-weight: 600">Practice 01</div>
+<h3 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Agentic workflow automation</h3>
+<p style="margin: 0; color: #4A5568">We map your processes, find what AI and automation can take over, and build systems that run without someone holding them together.</p>
+<ul style="margin: 0; padding-left: 20px; color: #0B1F3A; font-size: 16px; display: flex; flex-direction: column; gap: 6px">
+<li>Process audit and automation map</li>
+<li>CRM and tool integration</li>
+<li>AI voice and conversational agents</li>
+<li>Team SOPs so it keeps running</li>
+</ul>
+<a href="#contact" style="margin-top: auto; font-weight: 600; color: #0B1F3A">Discuss your workflows</a>
+</article>
+
+<article style="border: 1px solid #E3E8EF; border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px; background: #FFFFFF">
+<svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8A6420" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"></path><path d="M7 9v5c0 1.7 2.2 3 5 3s5-1.3 5-3V9"></path><path d="M21 7v6"></path></svg>
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5568; font-weight: 600">Practice 02</div>
+<h3 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">AI productivity training</h3>
+<p style="margin: 0; color: #4A5568">Practical training for marketing and operations teams through AI Academy for Beginners. Plain English, real tasks, no coding.</p>
+<ul style="margin: 0; padding-left: 20px; color: #0B1F3A; font-size: 16px; display: flex; flex-direction: column; gap: 6px">
+<li>ChatGPT, Claude and Gemini at work</li>
+<li>AI governance and UK GDPR</li>
+<li>Automated campaigns and content</li>
+<li>Seven modules, deployed as you learn</li>
+</ul>
+<a href="#contact" style="margin-top: auto; font-weight: 600; color: #0B1F3A">Train your team</a>
+</article>
+
+<article style="border: 1px solid #E3E8EF; border-radius: 12px; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px; background: #FFFFFF">
+<svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#8A6420" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"></path><path d="M6 16l4-5 3 3 5-7"></path><path d="M15 7h3v3"></path></svg>
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5568; font-weight: 600">Practice 03</div>
+<h3 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 28px; line-height: 1.15">Growth strategy</h3>
+<p style="margin: 0; color: #4A5568">A go-to-market system built on the S.C.A.L.E model. Clients leave with a pipeline running, not a slide deck to think about.</p>
+<ul style="margin: 0; padding-left: 20px; color: #0B1F3A; font-size: 16px; display: flex; flex-direction: column; gap: 6px">
+<li>Go-to-market strategy</li>
+<li>Lead systems and funnels</li>
+<li>Owned audience and email</li>
+<li>Mastermind and accountability</li>
+</ul>
+<a href="#contact" style="margin-top: auto; font-weight: 600; color: #0B1F3A">Plan your growth</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- Voice AI -->
+<section id="voice-ai" style="background: #0B1F3A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 112px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-end; margin-bottom: 56px">
+<div style="flex: 1 1 520px; min-width: 0">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A55A; font-weight: 600">Voice AI for business</p>
+<h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1">Every call answered. Every lead qualified. Day and night.</h2>
+</div>
+<div style="flex: 1 1 360px; min-width: 0">
+<p style="margin: 0 0 24px; color: #C8D1DE">We build AI voice agents on VAPI and ElevenLabs that answer inbound calls, qualify prospects, handle objections and book meetings straight into your calendar.</p>
+<button type="button" id="vapi-call" data-vapi-assistant="323d4293-de33-4ef6-b4c2-d46343c31254" data-vapi-public-key="436a6b23-8939-4d1c-8e02-0b8ad8d50efe" style="display: inline-flex; align-items: center; gap: 10px; background: #C9A55A; color: #0B1F3A; border: 0; border-radius: 6px; padding: 16px 26px; font-size: 16px; font-weight: 600; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>Talk to our AI voice agent</button>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 64px">
+<div style="background: #12294A; border: 1px solid #23395C; border-radius: 12px; padding: 32px 28px"><h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 24px">AI voice assistant</h3><p style="margin: 0; color: #C8D1DE; font-size: 16px">A receptionist, sales assistant and support line in one. No missed calls, no hold queues, and every call logged in your CRM.</p></div>
+<div style="background: #12294A; border: 1px solid #23395C; border-radius: 12px; padding: 32px 28px"><h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 24px">Conversational AI agents</h3><p style="margin: 0; color: #C8D1DE; font-size: 16px">Unlike scripted chatbots, they remember the conversation, read intent and draw on your own documents. Deployed on web, phone and WhatsApp.</p></div>
+<div style="background: #12294A; border: 1px solid #23395C; border-radius: 12px; padding: 32px 28px"><h3 style="margin: 0 0 12px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 24px">Real-time voice</h3><p style="margin: 0; color: #C8D1DE; font-size: 16px">Natural pacing, handles interruptions, and can speak in a custom voice built for your brand.</p></div>
+</div>
+<h3 style="margin: 0 0 28px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A55A; font-weight: 600">How an AI voice agent works</h3>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
+<li style="border-top: 2px solid #C9A55A; padding-top: 20px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #C9A55A; margin-bottom: 8px">01</div><strong style="display: block; font-size: 17px; margin-bottom: 6px">It listens</strong><span style="color: #C8D1DE; font-size: 15px">Speech-to-text turns the caller's words into text. Deepgram or Whisper.</span></li>
+<li style="border-top: 2px solid #C9A55A; padding-top: 20px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #C9A55A; margin-bottom: 8px">02</div><strong style="display: block; font-size: 17px; margin-bottom: 6px">It thinks</strong><span style="color: #C8D1DE; font-size: 15px">A language model reads intent, checks your rules and drafts a reply. Claude, Gemini or GPT.</span></li>
+<li style="border-top: 2px solid #C9A55A; padding-top: 20px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #C9A55A; margin-bottom: 8px">03</div><strong style="display: block; font-size: 17px; margin-bottom: 6px">It speaks</strong><span style="color: #C8D1DE; font-size: 15px">Text-to-speech streams a natural voice back to the caller. ElevenLabs or VAPI.</span></li>
+<li style="border-top: 2px solid #C9A55A; padding-top: 20px"><div style="font-family: Newsreader, Georgia, serif; font-size: 20px; color: #C9A55A; margin-bottom: 8px">04</div><strong style="display: block; font-size: 17px; margin-bottom: 6px">It acts</strong><span style="color: #C8D1DE; font-size: 15px">During the call it books meetings and writes notes to your CRM. Make.com, HubSpot or GoHighLevel.</span></li>
+</ol>
+</div>
+</section>
+
+<!-- Approach -->
+<section id="approach" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-end; margin-bottom: 56px">
+<div style="flex: 1 1 480px; min-width: 0">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600">Our approach</p>
+<h2 style="margin: 0; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1">The AI Opportunity Architecture</h2>
+</div>
+<p style="flex: 1 1 360px; min-width: 0; margin: 0; color: #4A5568">Every phase ends with a gate question. If the answer is no, we stop before you spend. The full playbook and scoring sheets are used in client engagements.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+<li style="border-top: 3px solid #0B1F3A; padding-top: 24px"><div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5568; font-weight: 600; margin-bottom: 8px">Phase 1</div><h3 style="margin: 0 0 10px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 24px">Frame the problem</h3><p style="margin: 0 0 16px; color: #4A5568; font-size: 16px">Find the real operational pain and price it before anyone names a tool.</p><p style="margin: 0; font-size: 15px; font-style: italic; color: #8A6420">Gate: is the problem real, costed and owned?</p></li>
+<li style="border-top: 3px solid #0B1F3A; padding-top: 24px"><div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A5568; font-weight: 600; margin-bottom: 8px">Phase 2</div><h3 style="margin: 0 0 10px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 24px">Test AI fit</h3><p style="margin: 0 0 16px; color: #4A5568; font-size: 16px">Break the work into decisions and check where AI genuinely beats the alternatives.</p><p style="margin: 0; font-size: 15px; font-style: italic; color: #8A6420">Gate: is AI the best answer, or just an answer?</p></li>
+</ol>
+</section>
+
+<!-- Cost the problem band -->
+<section style="background: #0B1F3A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 999 1 520px; min-width: 0">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A55A; font-weight: 600">Before you buy any tool</p>
+<h2 style="margin: 0 0 18px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.12">Cost the problem first.</h2>
+<p style="margin: 0 0 28px; color: #C8D1DE; max-width: 560px">In a 30-minute session we run your numbers with you. You leave knowing what the problem costs today, whether AI is the right fix, and what to do next.</p>
+<a href="#contact" style="display: inline-block; background: #C9A55A; color: #0B1F3A; text-decoration: none; padding: 16px 28px; border-radius: 6px; font-weight: 600">Audit my numbers</a>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; background: #12294A; border: 1px solid #23395C; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+<div><div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #C9A55A; font-weight: 600; margin-bottom: 6px">Line A · Time cost</div><div style="color: #E6ECF4">Hours lost per person per week × people affected × working weeks</div></div>
+<div style="height: 1px; background: #23395C"></div>
+<div><div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #C9A55A; font-weight: 600; margin-bottom: 6px">Line B · Staff cost</div><div style="color: #E6ECF4">Line A × fully loaded hourly rate</div></div>
+</div>
+</div>
+</section>
+
+<!-- Results -->
+<section id="results" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600">Client results</p>
+<h2 style="margin: 0 0 56px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; max-width: 760px">Measured in hours saved and leads won.</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px">
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E3E8EF; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 21px; line-height: 1.45">"We removed 14 hours of manual work per week in the first month. The automations just run. We do not think about them anymore."</blockquote>
+<figcaption style="margin-top: auto; font-size: 15px"><strong>Michelle O.</strong><br><span style="color: #4A5568">Founder, Professional Services, London</span></figcaption>
+</figure>
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E3E8EF; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 21px; line-height: 1.45">"We now produce content in a quarter of the time and run campaigns we could not have resourced before. The return was visible within three weeks."</blockquote>
+<figcaption style="margin-top: auto; font-size: 15px"><strong>James K.</strong><br><span style="color: #4A5568">Marketing Director, B2B Services, Birmingham</span></figcaption>
+</figure>
+<figure style="margin: 0; background: #FFFFFF; border: 1px solid #E3E8EF; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+<blockquote style="margin: 0; font-family: Newsreader, Georgia, serif; font-size: 21px; line-height: 1.45">"The S.C.A.L.E model is clear, executable, and it actually generates leads. Not promises. Leads."</blockquote>
+<figcaption style="margin-top: auto; font-size: 15px"><strong>David T.</strong><br><span style="color: #4A5568">CEO, Coaching Business, Manchester</span></figcaption>
+</figure>
+</div>
+</section>
+
+<!-- FAQs -->
+<section id="faqs" style="max-width: 880px; margin: 0 auto; padding: 112px 24px">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600; text-align: center">Questions</p>
+<h2 style="margin: 0 0 48px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; text-align: center">Straight answers.</h2>
+<div style="border-top: 1px solid #D5DCE6">
+<details style="border-bottom: 1px solid #D5DCE6; padding: 22px 0"><summary style="font-weight: 600; font-size: 18px">Who do you work with?</summary><p style="margin: 14px 0 0; color: #4A5568">UK business owners, founders and leadership teams, plus organisations across three continents. Clients come to us with a clear operational or growth problem they want solved.</p></details>
+<details style="border-bottom: 1px solid #D5DCE6; padding: 22px 0"><summary style="font-weight: 600; font-size: 18px">Do my team need technical skills?</summary><p style="margin: 14px 0 0; color: #4A5568">No. Everything is taught in plain English on real business tasks. If you can write an email, you can do the work.</p></details>
+<details style="border-bottom: 1px solid #D5DCE6; padding: 22px 0"><summary style="font-weight: 600; font-size: 18px">How is this different from other AI training?</summary><p style="margin: 14px 0 0; color: #4A5568">We start with the business problem, not the tool, and we build the systems with you. You finish with automations running and a team that owns them.</p></details>
+<details style="border-bottom: 1px solid #D5DCE6; padding: 22px 0"><summary style="font-weight: 600; font-size: 18px">What happens in the free session?</summary><p style="margin: 14px 0 0; color: #4A5568">A 30-minute conversation about your bottleneck. We cost the problem with you and recommend the fastest next step. No pitch.</p></details>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" style="background: #0B1F3A; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 104px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 400px; min-width: 0">
+<p style="margin: 0 0 14px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #C9A55A; font-weight: 600">Start here</p>
+<h2 style="margin: 0 0 20px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1">Book a 30-minute strategy session.</h2>
+<p style="margin: 0 0 36px; color: #C8D1DE">Tell us where the friction is. We will route your message to the right lead.</p>
+<div style="display: flex; flex-direction: column; gap: 14px; font-size: 16px; color: #C8D1DE">
+<span><strong style="color: #FFFFFF">Email</strong> · aao@greatbusinessplatforms.com</span>
+<span><strong style="color: #FFFFFF">Serving</strong> · UK, US, EU and Africa</span>
+</div>
+</div>
+<form name="contact-briefing" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; color: #0B1F3A; border-radius: 12px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<input type="hidden" name="form-name" value="contact-briefing"><p style="display:none"><label>Leave blank <input name="bot-field"></label></p>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-name" style="font-size: 14px; font-weight: 600">Full name</label><input id="f-name" name="name" type="text" required autocomplete="name" style="border: 1px solid #C3CCD9; border-radius: 6px; padding: 12px 14px; font-size: 16px"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-email" style="font-size: 14px; font-weight: 600">Work email</label><input id="f-email" name="email" type="email" required autocomplete="email" style="border: 1px solid #C3CCD9; border-radius: 6px; padding: 12px 14px; font-size: 16px"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-focus" style="font-size: 14px; font-weight: 600">What do you need?</label><select id="f-focus" name="department" style="border: 1px solid #C3CCD9; border-radius: 6px; padding: 12px 14px; font-size: 16px; background: #FFFFFF"><option>Free 30-minute strategy session</option><option>Agentic workflow automation</option><option>AI productivity training</option><option>Growth strategy</option><option>Speaking or leadership workshop</option></select></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="f-msg" style="font-size: 14px; font-weight: 600">Your biggest bottleneck right now</label><textarea id="f-msg" name="message" required rows="4" style="border: 1px solid #C3CCD9; border-radius: 6px; padding: 12px 14px; font-size: 16px; resize: vertical"></textarea></div>
+<div style="display: flex; gap: 10px; align-items: flex-start"><input id="f-consent" name="consent" value="yes" type="checkbox" required style="width: 20px; height: 20px; margin: 2px 0 0; flex: none"><label for="f-consent" style="font-size: 14px; color: #4A5568">I agree to Great Business Platforms using these details to reply to my enquiry, as set out in our <a href="#privacy" style="color: #0B1F3A; font-weight: 600">privacy policy</a>.</label></div>
+<input type="hidden" name="company" value="">
+<button type="submit" style="background: #0B1F3A; color: #FFFFFF; border: 0; border-radius: 6px; padding: 16px; font-size: 16px; font-weight: 600; cursor: pointer">Send my briefing</button>
+</form>
+</div>
+</section>
+
+<!-- Legal -->
+<section aria-label="Privacy policy and terms" style="background: #FFFFFF; border-top: 1px solid #E3E8EF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 48px 64px; font-size: 15px; color: #4A5568">
+<div id="privacy">
+<p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600">UK GDPR and Data Protection Act 2018</p>
+<h2 style="margin: 0 0 20px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; color: #0B1F3A">Privacy policy</h2>
+<p style="margin: 0 0 14px"><strong style="color: #0B1F3A">Data controller.</strong> Great Business Platforms (registered in England and Wales). Contact: aao@greatbusinessplatforms.com.</p>
+<p style="margin: 0 0 14px"><strong style="color: #0B1F3A">Information we collect.</strong> When you book a 30-minute strategy session, enrol in AI Academy programmes, or use our interactive diagnostic tools, we collect only the contact details you choose to give us: name, business email, organisation and business objectives.</p>
+<p style="margin: 0"><strong style="color: #0B1F3A">How we use your data.</strong> We use your data only to deliver the coaching, workflow audits, training modules and communications you have asked for. We never sell or rent your personal data to third parties. You can ask to access, correct or erase your data at any time under UK GDPR by emailing aao@greatbusinessplatforms.com.</p>
+</div>
+<div id="terms">
+<p style="margin: 0 0 10px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6420; font-weight: 600">Use of this site and our programmes</p>
+<h2 style="margin: 0 0 20px; font-family: Newsreader, Georgia, serif; font-weight: 500; font-size: 30px; line-height: 1.15; color: #0B1F3A">Terms and conditions</h2>
+<p style="margin: 0 0 14px"><strong style="color: #0B1F3A">Programme delivery and membership.</strong> Enrolment in Super Productivity in Marketing with AI (AI Academy) is subject to the satisfaction terms and access policies given at onboarding.</p>
+<p style="margin: 0 0 14px"><strong style="color: #0B1F3A">Results.</strong> Great Business Platforms provides frameworks, agentic workflow architecture and strategic coaching. Business outcomes depend on your niche, your offer and consistent implementation, so specific revenue outcomes are not guaranteed.</p>
+<p style="margin: 0"><strong style="color: #0B1F3A">Intellectual property.</strong> The S.C.A.L.E GTM Optimisation Model, AI Opportunity worksheets, SOP templates and all training materials remain the intellectual property of Great Business Platforms and Sam Onigbanjo.</p>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="background: #071427; color: #9FB0C8; font-size: 15px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
+<div>
+<div style="font-family: Newsreader, Georgia, serif; font-size: 22px; color: #FFFFFF; margin-bottom: 12px">Great Business Platforms</div>
+<p style="margin: 0">UK AI consultancy and training. Workflow automation, team productivity and growth strategy.</p>
+</div>
+<div>
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A55A; font-weight: 600; margin-bottom: 14px">Services</div>
+<div style="display: flex; flex-direction: column; gap: 8px"><a href="#services" style="color: #C8D1DE; text-decoration: none">Agentic workflow automation</a><a href="#services" style="color: #C8D1DE; text-decoration: none">AI productivity training</a><a href="#services" style="color: #C8D1DE; text-decoration: none">Growth strategy</a></div>
+</div>
+<div>
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A55A; font-weight: 600; margin-bottom: 14px">Our brands</div>
+<div style="display: flex; flex-direction: column; gap: 8px"><a href="https://aiacademyforbeginners.com" style="color: #C8D1DE; text-decoration: none">AI Academy for Beginners</a><a href="https://www.aulteuslogic.com" style="color: #C8D1DE; text-decoration: none">Aulteus Logic™</a></div>
+</div>
+<div>
+<div style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A55A; font-weight: 600; margin-bottom: 14px">Company</div>
+<div style="display: flex; flex-direction: column; gap: 8px"><a href="#faqs" style="color: #C8D1DE; text-decoration: none">FAQs</a><a href="#contact" style="color: #C8D1DE; text-decoration: none">Contact</a><a href="#privacy" style="color: #C8D1DE; text-decoration: none">Privacy policy</a><a href="#terms" style="color: #C8D1DE; text-decoration: none">Terms and conditions</a></div>
+</div>
+</div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 24px; border-top: 1px solid #1B2D4A; font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between">
+<span>© 2026 Great Business Platforms. Registered in England and Wales.</span>
+
+</div>
+</footer>
+
+</div>
+
+<!-- Great Business Platforms: Vapi voice agent.
+     Paste just before </body> on greatbusinessplatforms.com.
+     It drives the button with id="vapi-call" in the Voice AI section.
+     The public key only works on greatbusinessplatforms.com and www.greatbusinessplatforms.com,
+     and only for the GBP assistant. It will not work on the canvas preview or any other domain. -->
+<script type="module">
+  import Vapi from "https://esm.sh/@vapi-ai/web@2.7.1";
+
+  const PUBLIC_KEY = "436a6b23-8939-4d1c-8e02-0b8ad8d50efe";
+  const ASSISTANT_ID = "323d4293-de33-4ef6-b4c2-d46343c31254";
+  const IDLE = "Talk to our AI voice agent";
+
+  const btn = document.getElementById("vapi-call");
+  if (btn) {
+    const vapi = new Vapi(PUBLIC_KEY);
+    let onCall = false;
+    const label = (text) => { btn.lastChild.textContent = text; };
+
+    vapi.on("call-start", () => { onCall = true; label("End call"); });
+    vapi.on("call-end", () => { onCall = false; label(IDLE); });
+    vapi.on("error", () => { onCall = false; label(IDLE); });
+
+    btn.addEventListener("click", () => {
+      if (onCall) { vapi.stop(); return; }
+      label("Connecting…");
+      vapi.start(ASSISTANT_ID);
+    });
+  }
+</script>
 </body>
 </html>
