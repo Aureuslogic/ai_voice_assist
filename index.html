@@ -1424,5 +1424,42 @@
       m.classList.remove('flex');
     }
   </script>
+
+  <!-- Vapi voice agent: floating call button (GBP assistant). Public key is restricted to greatbusinessplatforms.com. -->
+  <style>
+    #vapi-call{position:fixed;right:20px;bottom:20px;z-index:45;display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border:0;border-radius:999px;background:var(--accent);color:#080A0F;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.45);transition:background .2s ease,transform .2s ease}
+    #vapi-call:hover{background:var(--accent-hover);transform:translateY(-1px)}
+    #vapi-call:focus-visible{outline:2px solid #fff;outline-offset:3px}
+    #vapi-call[data-state="live"]{background:#F87171}
+    #vapi-call .vapi-dot{width:8px;height:8px;border-radius:50%;background:#080A0F;opacity:.75}
+    #vapi-call[data-state="live"] .vapi-dot{animation:vapi-pulse 1.2s ease-in-out infinite}
+    @keyframes vapi-pulse{0%,100%{opacity:.3}50%{opacity:1}}
+    @media (max-width:480px){#vapi-call{right:12px;bottom:12px;padding:12px 16px;font-size:13px}}
+    @media (prefers-reduced-motion:reduce){#vapi-call,#vapi-call .vapi-dot{transition:none;animation:none}}
+  </style>
+  <button type="button" id="vapi-call" aria-label="Talk to our AI voice agent">
+    <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>
+    <span class="vapi-label">Talk to our AI voice agent</span>
+    <span class="vapi-dot" aria-hidden="true"></span>
+  </button>
+  <script type="module">
+    import Vapi from "https://esm.sh/@vapi-ai/web@2.7.1";
+    const PUBLIC_KEY = "436a6b23-8939-4d1c-8e02-0b8ad8d50efe";
+    const ASSISTANT_ID = "323d4293-de33-4ef6-b4c2-d46343c31254";
+    const IDLE = "Talk to our AI voice agent";
+    const btn = document.getElementById("vapi-call");
+    const label = btn.querySelector(".vapi-label");
+    const vapi = new Vapi(PUBLIC_KEY);
+    let onCall = false;
+    const set = (text, state) => { label.textContent = text; btn.setAttribute("aria-label", text); btn.dataset.state = state || ""; };
+    vapi.on("call-start", () => { onCall = true; set("End call", "live"); });
+    vapi.on("call-end", () => { onCall = false; set(IDLE); });
+    vapi.on("error", () => { onCall = false; set(IDLE); });
+    btn.addEventListener("click", () => {
+      if (onCall) { vapi.stop(); return; }
+      set("Connecting…", "live");
+      vapi.start(ASSISTANT_ID);
+    });
+  </script>
 </body>
 </html>
