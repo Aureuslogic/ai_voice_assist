@@ -5,8 +5,13 @@
 ## What we do
 
 - AI consultancy ("build it with us"): AI readiness assessment, AI workflow audit, AI implementation roadmap, AI workflow automation, AI integration with email and CRM, and Voice AI agents for customer enquiries.
-- AI training ("teach us to do it"): corporate AI workshops, ChatGPT, Claude and Gemini training for marketing teams, prompt engineering for business, AI literacy and safe AI use within UK GDPR.
+- AI training ("teach us to do it"): corporate AI workshops, ChatGPT, Claude, Gemini and Microsoft Copilot training for marketing, HR and finance teams, Claude Training for Productivity, prompt engineering for business, AI literacy and safe AI use within UK GDPR.
 - AI enablement: audit, build, then train, in that order, so the system is used after it is built.
+
+## Service pages
+
+- [AI consultancy](https://greatbusinessplatforms.com/ai-consultancy/): what an AI consultant delivers, the four-stage process, and answers to common questions.
+- [AI training for teams](https://greatbusinessplatforms.com/ai-training/): training by team, by tool and by skill, with safe use built in.
 
 ## Programmes
 
