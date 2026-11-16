@@ -374,6 +374,14 @@
   </script>
 
   <style>
+    .homepage-masthead { display: grid; gap: 2rem; align-items: center; margin-bottom: 3rem; }
+    .homepage-hero-image { margin: 0; overflow: hidden; border-radius: 0.75rem; border: 1px solid rgba(212,175,55,.2); }
+    .homepage-hero-image img { display: block; width: 100%; height: auto; }
+    @media (min-width: 1024px) {
+      .homepage-masthead { grid-template-columns: 1fr 1.15fr; gap: 2.5rem; }
+      .homepage-masthead h1 { font-size: clamp(2.7rem, 4.3vw, 3.7rem); }
+      .homepage-hero-image img { aspect-ratio: 4 / 3; height: 100%; object-fit: cover; object-position: right center; }
+    }
     /* ==========================================================================
        STRICT 3-TIER EXECUTIVE COLOR ARCHITECTURE (ZERO MULTI-COLOR NOISE)
        Tier 1: Deep Obsidian & Architectural Slate Surfaces
@@ -593,10 +601,8 @@
            HERO SECTION: EMOTIVE HBR NARRATIVE + EXECUTIVE GUIDE OPT-IN
            ======================================================================== -->
       <section class="max-w-7xl mx-auto px-6 pt-16 pb-20 lg:pt-24 lg:pb-24 border-b hairline-divider">
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-
-          <!-- Left Column: Emotive Harvard Business Review Framing -->
-          <div class="lg:col-span-7 space-y-7">
+        <div class="homepage-masthead">
+          <div class="space-y-7">
             <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest accent-pill">
               <span>One Mission. Exceptional Business.</span>
             </div>
@@ -604,6 +610,15 @@
             <h1 class="editorial-serif text-4xl sm:text-6xl lg:text-[4.15rem] leading-[1.06] text-white font-normal">
               You Built a Successful Business. <span class="italic accent-text">Why Does It Feel Like It Is Running You?</span>
             </h1>
+          </div>
+          <figure class="homepage-hero-image">
+            <img src="/homepage-hero.png" width="1672" height="941" fetchpriority="high" alt="Illustrative scene of business leaders working together on a clear operational plan." />
+          </figure>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+          <!-- Business context and next steps -->
+          <div class="lg:col-span-7 space-y-7">
 
             <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal max-w-2xl">
               There is a quiet exhaustion that rarely gets discussed in boardrooms. It happens when revenue grows, headcount expands, and your calendar fills—yet every critical decision, client escalation, and stalled campaign still waits for your personal intervention.
@@ -712,9 +727,6 @@
            ======================================================================== -->
       <section id="programmes" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
         <div class="max-w-3xl space-y-4 mb-14">
-          <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-            Three Specialist Programmes. Built for Leaders Who Refuse to Settle for Operational Chaos.
-          </h2>
           <p class="text-base text-slate-300 leading-relaxed">
             Whether you need to untangle internal bottlenecks, equip your marketing team to produce world-class campaigns in a fraction of the time, or build a predictable commercial engine, each programme is structured around measurable relief and commercial output.
           </p>
