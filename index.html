@@ -578,7 +578,7 @@
         <a href="/ai-consultancy/" class="hover:text-white transition">AI Consultancy</a>
         <a href="/ai-training/" class="hover:text-white transition">AI Training</a>
         <a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Programmes</a>
-        <a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic')" class="hover:text-white transition">Red-Team Diagnostic</a>
+        <a href="/ai-consultancy/#red-team-diagnostic" class="hover:text-white transition">Red-Team Diagnostic</a>
         <a href="#workflow-architecture" onclick="navigateSection('workflow-architecture')" class="hover:text-white transition">Workflow</a>
         <button id="nav-about-tab" onclick="switchPrimaryView('about')" class="px-3 py-1.5 rounded border border-white/15 hover:border-[#D4AF37] text-white font-medium transition flex items-center gap-1.5">
           <span>About Us</span>
@@ -604,7 +604,7 @@
         <a href="/ai-consultancy/" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">AI Consultancy</a>
         <a href="/ai-training/" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">AI Training</a>
         <a href="#programmes" onclick="navigateSection('programmes'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Programmes</a>
-        <a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Red-Team Diagnostic</a>
+        <a href="/ai-consultancy/#red-team-diagnostic" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Red-Team Diagnostic</a>
         <a href="#workflow-architecture" onclick="navigateSection('workflow-architecture'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition">Workflow</a>
         <button id="nav-about-tab-mobile" onclick="switchPrimaryView('about'); closeMobileNav();" class="px-3 py-3 rounded hover:bg-white/5 hover:text-white transition text-left">About Us</button>
         <button onclick="openGuideModal(); closeMobileNav();" class="sm:hidden mt-1 px-3 py-3 rounded btn-outline text-left">Free Executive Guide</button>
@@ -651,7 +651,7 @@
             </p>
 
             <div class="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
-              <a href="#red-team-diagnostic" class="px-6 py-3.5 rounded text-sm font-semibold accent-bg transition text-center">
+              <a href="/ai-consultancy/#red-team-diagnostic" class="px-6 py-3.5 rounded text-sm font-semibold accent-bg transition text-center">
                 Stress-Test Your Operations
               </a>
               <button onclick="openGuideModal()" class="px-6 py-3.5 rounded text-sm font-medium btn-outline text-center">
@@ -920,109 +920,6 @@
           </article>
         </div>
 
-      </section>
-
-      <!-- ========================================================================
-           INTERACTIVE RED-TEAM OPERATIONAL DIAGNOSTIC ENGINE
-           ======================================================================== -->
-      <section id="red-team-diagnostic" class="max-w-7xl mx-auto px-6 py-20 border-b hairline-divider">
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-
-          <div class="lg:col-span-5 space-y-6">
-            <h2 class="editorial-serif text-4xl sm:text-5xl text-white leading-tight">
-              Where Is Your Business Quietly Leaking Energy?
-            </h2>
-            <p class="text-base text-slate-300 leading-relaxed">
-              In high-reliability engineering, a “Red Team” stress-tests a system to uncover hidden single points of failure before they fracture under pressure. Select the reality that feels closest to your current week, or describe your operational bottleneck below.
-            </p>
-            <p class="text-xs font-mono uppercase tracking-wider text-slate-400">
-              Zero data retention • Instant architectural prescription
-            </p>
-
-            <!-- Relatable Red-Team Scenarios -->
-            <div class="space-y-2.5 pt-2">
-              <span class="block text-xs font-mono uppercase tracking-wider text-slate-400">Select a Common Leadership Stress Test:</span>
-              <button type="button" onclick="loadRedTeamScenario('founder')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>01. “Every major decision or client escalation still lands on my desk.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-              <button type="button" onclick="loadRedTeamScenario('pipeline')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>02. “Leads go cold whenever the team gets busy delivering client work.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-              <button type="button" onclick="loadRedTeamScenario('marketing')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>03. “Our marketing takes too long and we aren’t using AI systematically.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-              <button type="button" onclick="loadRedTeamScenario('fragility')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
-                <span>04. “If one key person takes two weeks off, delivery slows to a crawl.”</span>
-                <span class="accent-text font-mono">&rarr;</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Interactive Blueprint Generator Output -->
-          <div class="lg:col-span-7">
-            <div class="surface-card rounded-xl p-7 sm:p-9 space-y-6">
-              <div class="flex items-center justify-between border-b hairline-divider pb-4">
-                <span class="font-mono text-xs uppercase tracking-widest accent-text">Architectural Blueprint Engine</span>
-                <span id="diagnostic-status" class="font-mono text-xs text-slate-400">Ready for Input</span>
-              </div>
-
-              <div class="space-y-3">
-                <label for="diagnostic-input" class="block text-xs font-mono uppercase tracking-wider text-slate-300">
-                  Describe Your Current Bottleneck or Growth Objective:
-                </label>
-                <textarea id="diagnostic-input" rows="3" class="w-full p-4 rounded bg-[#080A0F] border border-white/15 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#D4AF37]" placeholder="e.g., Client onboarding is manual across email and spreadsheets, and I spend 15 hours a week chasing status updates instead of closing partnerships..."></textarea>
-                <div class="flex flex-wrap items-center justify-between gap-3">
-                  <button type="button" onclick="generateDiagnosticBlueprint()" class="px-6 py-3 rounded text-xs font-mono uppercase tracking-wider font-semibold accent-bg transition">
-                    Generate AI Blueprint
-                  </button>
-                  <span class="text-xs text-slate-400">Maps directly across our 3 core programmes</span>
-                </div>
-              </div>
-
-              <!-- Dynamic Output Container -->
-              <div id="diagnostic-output" class="space-y-5 pt-4 border-t hairline-divider">
-                <div class="p-5 rounded surface-elevated space-y-2">
-                  <div class="font-mono text-[11px] uppercase tracking-widest accent-text">Human &amp; Commercial Diagnosis</div>
-                  <p id="diag-empathy" class="text-sm text-slate-200 leading-relaxed">
-                    Select one of the four stress-test scenarios on the left—or type your own situation above and click <strong class="text-white">Generate AI Blueprint</strong>—to see the exact three-phase intervention across our programmes.
-                  </p>
-                </div>
-
-                <div class="grid sm:grid-cols-3 gap-4">
-                  <div class="p-4 rounded bg-[#080A0F] border hairline-divider space-y-1.5">
-                    <span class="font-mono text-[10px] uppercase tracking-widest accent-text">Phase 01: Stabilise</span>
-                    <h4 id="diag-phase-1-title" class="text-sm font-semibold text-white">Workflow Audit</h4>
-                    <p id="diag-phase-1-desc" class="text-xs text-slate-400 leading-relaxed">Isolate the manual handoffs draining executive attention.</p>
-                  </div>
-                  <div class="p-4 rounded bg-[#080A0F] border hairline-divider space-y-1.5">
-                    <span class="font-mono text-[10px] uppercase tracking-widest accent-text">Phase 02: Automate</span>
-                    <h4 id="diag-phase-2-title" class="text-sm font-semibold text-white">AI &amp; Tool Routing</h4>
-                    <p id="diag-phase-2-desc" class="text-xs text-slate-400 leading-relaxed">Connect CRM, email triage, and Voice AI response agents.</p>
-                  </div>
-                  <div class="p-4 rounded bg-[#080A0F] border hairline-divider space-y-1.5">
-                    <span class="font-mono text-[10px] uppercase tracking-widest accent-text">Phase 03: Scale</span>
-                    <h4 id="diag-phase-3-title" class="text-sm font-semibold text-white">Team Enablement</h4>
-                    <p id="diag-phase-3-desc" class="text-xs text-slate-400 leading-relaxed">Install SOPs so your business runs smoothly without you.</p>
-                  </div>
-                </div>
-
-                <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
-                  <a href="#contact-global-desks" onclick="prefillInquiry('Custom Diagnostic Blueprint Review')" class="text-xs font-mono uppercase tracking-wider accent-text hover:underline">
-                    Review This Blueprint in a Free 30-Min Session &rarr;
-                  </a>
-                  <button type="button" onclick="openGuideModal()" class="text-xs text-slate-400 hover:text-white underline">
-                    Or download The 4 Expensive Blindspots Guide
-                  </button>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
       </section>
 
       <!-- ========================================================================
@@ -1462,7 +1359,7 @@
             <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Business Workflow Development</a></li>
             <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Super Productivity in Marketing with AI</a></li>
             <li><a href="#programmes" onclick="navigateSection('programmes')" class="hover:text-white transition">Business Growth (S.C.A.L.E Model)</a></li>
-            <li><a href="#red-team-diagnostic" onclick="navigateSection('red-team-diagnostic')" class="hover:text-white transition">Red-Team Operational Diagnostic</a></li>
+            <li><a href="/ai-consultancy/#red-team-diagnostic" class="hover:text-white transition">Red-Team Operational Diagnostic</a></li>
           </ul>
         </div>
 
@@ -1542,7 +1439,7 @@
   </div>
 
   <!-- ==========================================================================
-       APPLICATION LOGIC: VIEW SWITCHING, LEGAL TABS, RED-TEAM ENGINE
+       APPLICATION LOGIC: VIEW SWITCHING, LEGAL TABS, 
        ========================================================================== -->
   <script>
     // Set current copyright year
@@ -1606,96 +1503,6 @@
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
       }
-    }
-
-    // 3. Red-Team Operational Diagnostic Presets & Custom Blueprint Generator
-    const redTeamScenarios = {
-      founder: {
-        input: "Every major client escalation, pricing approval, and operational handoff still lands on my desk. I am working late every evening just to keep delivery moving.",
-        empathy: "You are carrying the ‘Hero-Leader Tax.’ Because you care deeply about standards, your organisation has quietly wired its workflows around your personal availability rather than documented systems.",
-        p1Title: "Decision & Escalation Audit",
-        p1Desc: "Map the top 15 recurring questions landing on your desk and convert 80% into clear decision trees.",
-        p2Title: "Automated Triage & CRM Routing",
-        p2Desc: "Deploy AI email triage and automated status updates so client handoffs happen without manual chasing.",
-        p3Title: "Role-Specific Team SOPs",
-        p3Desc: "Train your team on clear ownership boundaries so you reclaim 15+ hours of strategic leadership time weekly."
-      },
-      pipeline: {
-        input: "Whenever our team gets busy delivering client projects, outbound prospecting stops and inbound leads wait 24–48 hours for a proper response.",
-        empathy: "This is the classic feast-or-famine trap. When the same human energy is required to both deliver client work and nurture new inquiries, revenue inevitably becomes a rollercoaster.",
-        p1Title: "S.C.A.L.E Pipeline Audit",
-        p1Desc: "Isolate every point where high-intent inquiries stall between first contact and booked discovery call.",
-        p2Title: "24/7 Voice AI & Lead Nurture",
-        p2Desc: "Deploy a conversational Voice AI assistant and automated email sequences so every lead is answered in seconds.",
-        p3Title: "Deterministic Growth Engine",
-        p3Desc: "Establish weekly pipeline telemetry that runs continuously even during peak client delivery weeks."
-      },
-      marketing: {
-        input: "Our marketing team spends all week producing a handful of posts and emails. We have tried ChatGPT, but the output feels generic and disconnected.",
-        empathy: "Random acts of AI create more editing work, not less. Without multi-model role specialisation and brand voice governance, teams quickly burn out on generic prompts.",
-        p1Title: "Editorial & Brand Voice Codex",
-        p1Desc: "Codify your institutional authority, customer empathy triggers, and legal compliance boundaries.",
-        p2Title: "Multi-LLM Production Pipeline",
-        p2Desc: "Connect Gemini, Claude, and ChatGPT into a 7-module workflow for research, copy, video, and landing pages.",
-        p3Title: "20+ Hours Saved Weekly",
-        p3Desc: "Upskill your team to produce a full month of authoritative multi-channel campaigns in a single afternoon."
-      },
-      fragility: {
-        input: "Critical client onboarding and fulfilment steps live inside the heads of two senior staff members. If either takes two weeks off, delivery slows to a crawl.",
-        empathy: "Tribal knowledge is the silent vulnerability of growing firms. Relying on unwritten habits is unfair to your best people and risky for your clients.",
-        p1Title: "Tribal Knowledge Extraction",
-        p1Desc: "Record and map the exact steps your top performers take across onboarding, fulfilment, and reporting.",
-        p2Title: "Agentic Workflow Automation",
-        p2Desc: "Automate repetitive data entry, proposal generation, and cross-platform CRM triggers.",
-        p3Title: "Turnkey Operations Manual",
-        p3Desc: "Install living SOPs so any qualified team member can step in seamlessly without quality dropping."
-      }
-    };
-
-    function loadRedTeamScenario(key) {
-      const data = redTeamScenarios[key];
-      if (!data) return;
-      document.getElementById('diagnostic-input').value = data.input;
-      renderDiagnosticResult(data);
-    }
-
-    function generateDiagnosticBlueprint() {
-      const raw = document.getElementById('diagnostic-input').value.trim();
-      const lower = raw.toLowerCase();
-
-      if (!raw) {
-        loadRedTeamScenario('founder');
-        return;
-      }
-
-      if (lower.includes('lead') || lower.includes('sales') || lower.includes('pipeline') || lower.includes('call')) {
-        loadRedTeamScenario('pipeline');
-      } else if (lower.includes('market') || lower.includes('content') || lower.includes('chatgpt') || lower.includes('video')) {
-        loadRedTeamScenario('marketing');
-      } else if (lower.includes('staff') || lower.includes('team') || lower.includes('onboarding') || lower.includes('sop')) {
-        loadRedTeamScenario('fragility');
-      } else {
-        renderDiagnosticResult({
-          empathy: "Your description points to structural friction between leadership ambition and daily execution. When workflows grow organically without deliberate architecture, your best people spend their days compensating for disconnected tools.",
-          p1Title: "Stage 01 Process Audit",
-          p1Desc: "Map every manual handoff and approval bottleneck mentioned in your brief to quantify weekly hours lost.",
-          p2Title: "Agentic AI & CRM Integration",
-          p2Desc: "Deploy targeted automation across your communications, marketing output, and client onboarding.",
-          p3Title: "S.C.A.L.E & Team Enablement",
-          p3Desc: "Equip your team with documented SOPs and AI Academy training for calm, repeatable execution."
-        });
-      }
-    }
-
-    function renderDiagnosticResult(data) {
-      document.getElementById('diagnostic-status').textContent = 'Blueprint Generated';
-      document.getElementById('diag-empathy').textContent = data.empathy;
-      document.getElementById('diag-phase-1-title').textContent = data.p1Title;
-      document.getElementById('diag-phase-1-desc').textContent = data.p1Desc;
-      document.getElementById('diag-phase-2-title').textContent = data.p2Title;
-      document.getElementById('diag-phase-2-desc').textContent = data.p2Desc;
-      document.getElementById('diag-phase-3-title').textContent = data.p3Title;
-      document.getElementById('diag-phase-3-desc').textContent = data.p3Desc;
     }
 
     // 4. Ebook & Strategy Session Lead Routing
