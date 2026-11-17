@@ -539,9 +539,9 @@
         </div>
       </section>
       <!-- ========================================================================
-           INTERACTIVE RED-TEAM OPERATIONAL DIAGNOSTIC ENGINE
+           INTERACTIVE STRESS-TEAM OPERATIONAL DIAGNOSTIC ENGINE
            ======================================================================== -->
-      <section id="red-team-diagnostic" class="max-w-7xl mx-auto px-6 py-20 border-t hairline-divider">
+      <section id="stress-team-diagnostic" class="max-w-7xl mx-auto px-6 py-20 border-t hairline-divider">
         <div class="grid lg:grid-cols-12 gap-12 items-start">
 
           <div class="lg:col-span-5 space-y-6">
@@ -549,28 +549,28 @@
               Where Is Your Business Quietly Leaking Energy?
             </h2>
             <p class="text-base text-slate-300 leading-relaxed">
-              In high-reliability engineering, a “Red Team” stress-tests a system to uncover hidden single points of failure before they fracture under pressure. Select the reality that feels closest to your current week, or describe your operational bottleneck below.
+              In high-reliability engineering, a “Stress Team” deliberately tests a system to uncover hidden single points of failure before they fracture under pressure. Select the reality that feels closest to your current week, or describe your operational bottleneck below.
             </p>
             <p class="text-xs font-mono uppercase tracking-wider text-slate-400">
               Zero data retention • Instant architectural prescription
             </p>
 
-            <!-- Relatable Red-Team Scenarios -->
+            <!-- Relatable Stress-Team Scenarios -->
             <div class="space-y-2.5 pt-2">
               <span class="block text-xs font-mono uppercase tracking-wider text-slate-400">Select a Common Leadership Stress Test:</span>
-              <button type="button" onclick="loadRedTeamScenario('founder')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
+              <button type="button" onclick="loadStressTeamScenario('founder')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
                 <span>01. “Every major decision or client escalation still lands on my desk.”</span>
                 <span class="accent-text font-mono">&rarr;</span>
               </button>
-              <button type="button" onclick="loadRedTeamScenario('pipeline')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
+              <button type="button" onclick="loadStressTeamScenario('pipeline')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
                 <span>02. “Leads go cold whenever the team gets busy delivering client work.”</span>
                 <span class="accent-text font-mono">&rarr;</span>
               </button>
-              <button type="button" onclick="loadRedTeamScenario('marketing')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
+              <button type="button" onclick="loadStressTeamScenario('marketing')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
                 <span>03. “Our marketing takes too long and we aren’t using AI systematically.”</span>
                 <span class="accent-text font-mono">&rarr;</span>
               </button>
-              <button type="button" onclick="loadRedTeamScenario('fragility')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
+              <button type="button" onclick="loadStressTeamScenario('fragility')" class="w-full text-left px-4 py-3 rounded surface-card text-xs sm:text-sm text-slate-200 hover:text-white transition flex items-center justify-between">
                 <span>04. “If one key person takes two weeks off, delivery slows to a crawl.”</span>
                 <span class="accent-text font-mono">&rarr;</span>
               </button>
@@ -654,7 +654,7 @@
             <li><a href="/ai-consultancy/" class="hover:text-white transition">AI Consultancy</a></li>
             <li><a href="/ai-training/" class="hover:text-white transition">AI Training for Teams</a></li>
             <li><a href="/#programmes" class="hover:text-white transition">Specialist Programmes</a></li>
-            <li><a href="#red-team-diagnostic" class="hover:text-white transition">Red-Team Operational Diagnostic</a></li>
+            <li><a href="#stress-team-diagnostic" class="hover:text-white transition">Stress-Team Operational Diagnostic</a></li>
           </ul>
         </div>
         <div class="space-y-2.5">
@@ -674,8 +674,8 @@
     </div>
   </footer>
   <script>
-    // 3. Red-Team Operational Diagnostic Presets & Custom Blueprint Generator
-    const redTeamScenarios = {
+    // 3. Stress-Team Operational Diagnostic Presets & Custom Blueprint Generator
+    const stressTeamScenarios = {
       founder: {
         input: "Every major client escalation, pricing approval, and operational handoff still lands on my desk. I am working late every evening just to keep delivery moving.",
         empathy: "You are carrying the ‘Hero-Leader Tax.’ Because you care deeply about standards, your organisation has quietly wired its workflows around your personal availability rather than documented systems.",
@@ -718,8 +718,8 @@
       }
     };
 
-    function loadRedTeamScenario(key) {
-      const data = redTeamScenarios[key];
+    function loadStressTeamScenario(key) {
+      const data = stressTeamScenarios[key];
       if (!data) return;
       document.getElementById('diagnostic-input').value = data.input;
       renderDiagnosticResult(data);
@@ -730,16 +730,16 @@
       const lower = raw.toLowerCase();
 
       if (!raw) {
-        loadRedTeamScenario('founder');
+        loadStressTeamScenario('founder');
         return;
       }
 
       if (lower.includes('lead') || lower.includes('sales') || lower.includes('pipeline') || lower.includes('call')) {
-        loadRedTeamScenario('pipeline');
+        loadStressTeamScenario('pipeline');
       } else if (lower.includes('market') || lower.includes('content') || lower.includes('chatgpt') || lower.includes('video')) {
-        loadRedTeamScenario('marketing');
+        loadStressTeamScenario('marketing');
       } else if (lower.includes('staff') || lower.includes('team') || lower.includes('onboarding') || lower.includes('sop')) {
-        loadRedTeamScenario('fragility');
+        loadStressTeamScenario('fragility');
       } else {
         renderDiagnosticResult({
           empathy: "Your description points to structural friction between leadership ambition and daily execution. When workflows grow organically without deliberate architecture, your best people spend their days compensating for disconnected tools.",
