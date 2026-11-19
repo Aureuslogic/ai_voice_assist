@@ -7,3 +7,11 @@
 /openais-chatgpt-is-now-accessible-via-whatsapp-to-help-you-really-boost-your-productivity/ / 301
 /nigeria-awakens-to-the-transformative-power-of-ai/ / 301
 /revolutionizing-healthcare-for-nigerians-through-mobi-health-gbam/ / 301
+
+# Old homepage address
+/home  /  301!
+/home/ /  301!
+
+# Spam URLs from third-party links (never part of this site): tell search engines they are gone
+/shop/*      /gone.html  410!
+/netlify/*   /gone.html  410!
